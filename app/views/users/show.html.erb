@@ -1,6 +1,21 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<p>username: <%= @user.email %></p>
-<p>From <%= @user.location %></p>
-<p>Member since <%= @month_created %> <%= @user.created_at.year %></p>
 <p>Status: <%= @online ? 'online': 'offline' %></p>
+<div class="container">
+  <%# profile card starts here %>
+  <div class="profile-card">
+    <div class="card">
+      <div class='text-center'>
+        <div class="avatar">
+        </div>
+        <p><%= @username %></p>
+        <p><i class="fa-solid fa-pencil"></i></p>
+        <button style='border: 1px solid grey'>Contact Me</button>
+      </div>
+      <p><i class="fa-sharp fa-solid fa-location-dot"></i> From <%= @user.location %></p>
+      <p><i class="fa-solid fa-user"></i> Member since <%= @month_created %> <%= @user.created_at.year %></p>
+      <p><i class="fa-light fa-clock-three"></i> Avg. Response Time</p>
+    </div>
+  </div>
+  <%# profile card ends here %>
+</div>
