@@ -6,8 +6,7 @@
   <div class="profile-card">
     <div class="card">
       <div class='text-center'>
-        <div class="avatar">
-        </div>
+        <%# user photo goes here, class: avatar %>
         <p><%= @username %></p>
         <p><i class="fa-solid fa-pencil"></i></p>
         <button style='border: 1px solid grey'>Contact Me</button>
@@ -19,3 +18,10 @@
   </div>
   <%# profile card ends here %>
 </div>
+<%= @username %>'s Gigs
+<% @user.services.each do |service| %>
+  <%# user photo goes here, class: avatar %>
+  <%= @username %>
+  <%= service.title %>
+  <%= service.price %>
+<% end %>
