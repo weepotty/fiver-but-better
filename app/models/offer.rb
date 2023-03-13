@@ -1,5 +1,6 @@
 class Offer < ApplicationRecord
   belongs_to :buyer, class_name: "User", foreign_key: :buyer_id
+  belongs_to :service
 
   validates :description, :status, :final_price, :final_delivery_time, presence: true
   validates :status, inclusion: { in: ['Accepted', 'Rejected', 'Pending'] }
