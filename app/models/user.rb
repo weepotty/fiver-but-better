@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :services
-  has_many :offers
+  has_many :services, foreign_key: 'seller_id'
+  has_many :offers, foreign_key: 'buyer_id'
   validates :location, presence: true
 end
