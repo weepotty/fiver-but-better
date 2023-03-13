@@ -2,4 +2,5 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p>username: <%= @user.email %></p>
 <p>From <%= @user.location %></p>
-<p>Member since <%= Date::MONTHNAMES[@user.created_at.month]%> <%= @user.created_at.year %></p>
+<p>Member since <%= @month_created %> <%= @user.created_at.year %></p>
+<p>Status: <%= @online ? 'online': 'offline' %></p>
