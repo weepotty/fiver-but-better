@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_13_080159) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_080616) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,12 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_080159) do
     t.text "description", null: false
     t.integer "final_delivery_time", null: false
     t.string "status", null: false
-    t.bigint "user_id", null: false
+    t.bigint "buyer_id", null: false
     t.bigint "service_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_offers_on_buyer_id"
     t.index ["service_id"], name: "index_offers_on_service_id"
-    t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -32,11 +32,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_080159) do
     t.text "description", null: false
     t.integer "price", null: false
     t.integer "delivery_time", null: false
-    t.bigint "user_id", null: false
+    t.bigint "seller_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category", null: false
-    t.index ["user_id"], name: "index_services_on_user_id"
+    t.index ["seller_id"], name: "index_services_on_seller_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,6 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_080159) do
   end
 
   add_foreign_key "offers", "services"
-  add_foreign_key "offers", "users"
-  add_foreign_key "services", "users"
+  add_foreign_key "offers", "users", column: "buyer_id"
+  add_foreign_key "services", "users", column: "seller_id"
 end
