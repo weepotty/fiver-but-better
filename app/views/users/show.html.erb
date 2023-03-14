@@ -5,10 +5,27 @@
 </div>
 <% if @user.services %>
   <% @user.services.each do |service| %>
-    <p><%= service.title %></p>
-    <p><%= service.description %></p>
-    <p><%= service.price %></p>
-    <p><%= service.delivery_time %></p>
-    <p><%= service.category %></p>
+    <div class="card" style="width: 18rem;">
+      <%= cl_image_tag service.photo.key, class: 'card-img-top'%>
+      <div class="card-body">
+        <div class='pb-2'>
+          <%= cl_image_tag @user.photo.key, class: 'avatar-xs' %>
+          <span><%= @username %></span>
+        </div>
+        <p class="card-text"><%= service.title %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <ul>
+            <li>STARTING AT</li>
+            <li>SGD <%= service.price/100 %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   <% end %>
 <% end %>
