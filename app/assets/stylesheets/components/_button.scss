@@ -1,0 +1,49 @@
+.btn {
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-transparent-white {
+  color: white;
+  &:hover {
+    background-color: #1ebe73;
+    color: white;
+  }
+}
+
+.btn-transparent-green {
+  color: #1ebe73;
+  &:hover {
+    background-color: #1ebe73;
+    color: white;
+  }
+}
+
+.btn-green {
+  background-color: #1ebe73;
+  color: white;
+  &:hover {
+    background-color: #1cad69;
+    color: white;
+  }
+}
+
+.btn-grey {
+  color: #616469;
+  &:hover {
+    background-color: #616469;
+    color: white;
+  }
+}
+
+.btn-navbar {
+  color: #616469;
+  border: 0px;
+  font-weight: 800;
+  &:hover {
+    color: #1ebe73;
+  }
+}
