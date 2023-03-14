@@ -14,17 +14,33 @@
 
       <div class="seller m-4 pt-4">
         <h2>About The Seller</h2>
-         <div class="seller-tag d-flex gap-3 mt-4 mb-4">
-          <div class="seller-avatar">
-            <%= cl_image_tag @service.seller.photo.key, class: "avatar-large"%>
+         <div class="seller-tag">
+         <div class="d-flex gap-3 mt-4 mb-4">
+            <div class="seller-avatar">
+              <%= cl_image_tag @service.seller.photo.key, class: "avatar-large"%>
+            </div>
+            <div class="seller-details">
+              <%= link_to @service.seller.email.match(/.+(?=@)/), user_path %>
+              <a href="#" class="d-block btn btn-transparent">Contact Me</a>
+            </div>
           </div>
-          <div class="seller-details">
-            <%= link_to @service.seller.email.match(/.+(?=@)/), user_path %>
-            <p><i class="fa-solid fa-location-dot"></i> <%= @service.seller.location %></p>
-            <a href="#" class="btn btn-transparent">Contact Me</a>
+          <div class="seller-details border d-flex flex-wrap justify-content-between gap-3 m-1 p-4">
+            <ul class="from mt-3">
+              <li>From</li>
+              <li><strong><%= @service.seller.location %></strong></li>
+            </ul>
+            <ul class="member-since mt-3">
+              <li>Member since</li>
+              <li><strong>Jan 2014</strong></li>
+            </ul>
+            <ul class="response-time mt-3">
+              <li>Avg. response time</li>
+              <li><strong>2 hours</strong></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+    <div class="card-profile"></div>
   </div>
 </div>
