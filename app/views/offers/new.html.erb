@@ -1,8 +1,8 @@
 <h1>OFFERS#NEW</h1>
 
 <%= simple_form_for [@service, @offer] do |f| %>
-  <%= f.input :final_price, input_html: {:value => @service.price, disabled: true} %>
-  <%= f.input :final_delivery_time, input_html: {:value => @service.delivery_time, disabled: true} %>
+  <%= f.input :final_price, data: { placeholder: @service.price/100 }, input_html: {:value => @service.price/100, readonly: true} %>
+  <%= f.input :final_delivery_time, input_html: {:value => @service.delivery_time, readonly: true} %>
   <%= f.input :description %>
   <%= f.submit %>
 <% end %>
