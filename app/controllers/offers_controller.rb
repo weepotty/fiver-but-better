@@ -5,9 +5,9 @@ class OffersController < ApplicationController
   end
 
   def create
-    @buyer = User.find(params[:buyer_id])
-    @service = User.find(params[:service_id])
     @offer = Offer.new(create_offer)
+    @offer.buyer = User.find(params[:buyer_id])
+    @offer.service = Service.find(params[:service_id])
     if @offer.save
       redirect_to service_path(@service)
     else
