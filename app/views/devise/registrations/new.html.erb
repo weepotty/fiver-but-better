@@ -12,23 +12,35 @@
                       autofocus: true,
                       label: false,
                       placeholder: 'Enter your email',
-                      input_html: { autocomplete: "email" }%>
+                      input_html: {
+                        autocomplete: "email",
+                        class: "bg-white py-2"
+                      }%>
           <%= f.input :password,
                       required: true,
                       label: false,
                       placeholder: 'Enter your password',
-                      input_html: { autocomplete: "new-password" } %>
+                      input_html: {
+                        autocomplete: "new-password",
+                        class: "bg-white py-2"
+                      } %>
           <%= f.input :password_confirmation,
                       required: true,
                       label: false,
                       placeholder: 'Confirm your password',
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                      input_html: { autocomplete: "new-password" } %>
+                      input_html: {
+                        autocomplete: "new-password",
+                        class: "bg-white py-2"
+                      } %>
           <%= f.input :location,
                       required: true,
                       label: false,
                       placeholder: 'Enter your location',
-                      input_html: { autocomplete: "location" } %>
+                      input_html: {
+                        autocomplete: "location",
+                        class: "bg-white py-2"
+                      } %>
         </div>
 
         <div class="form-actions mb-3">
