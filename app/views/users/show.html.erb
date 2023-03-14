@@ -18,13 +18,3 @@
   </div>
   <%# profile card ends here %>
 </div>
-<%= @username %>'s Gigs
-<% @user.services.each do |service| %>
-  <%# user photo goes here, class: avatar %>
-  <%= @username %>
-  <%= service.title %>
-  STARTING AT
-  <i class="fa-solid fa-bars"></i>
-  <i class="fa-solid fa-heart"></i>
-  <%= service.price %>
-<% end %>
