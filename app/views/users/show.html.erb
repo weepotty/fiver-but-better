@@ -10,13 +10,15 @@
           <i class="fa-solid fa-heart"></i>
         </div>
         <img class='avatar-xl' src="https://www.w3schools.com/howto/img_avatar.png">
-        <p><%= @online ? 'Online': 'Offline' %></p>
+        <div>
+          <p class="online-status"><%= @online ? 'Online': 'Offline' %></p>
+        </div>
       </div>
       <div class="text-center">
         <p><%= @username %></p>
-        <button style='border: 1px solid grey'>Contact Me</button>
       </div>
     </div>
+    <div class='btn btn-green w-100'>Contact Me</div>
     <div class="user-stats-wrapper">
       <ul class='user-stats'>
         <li><span><i class="fa-sharp fa-solid fa-location-dot"></i> From</span> <strong><%= @user.location %></strong></li>

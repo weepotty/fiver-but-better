@@ -28,5 +28,14 @@ margin-top: 24px;
 .user-stats li {
   display:flex;
   justify-content: space-between;
-  color: #62646a
+  color: #62646a;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.card-profile .online-status {
+ color: #1dbf73;
+ border-radius: 12px;
+ border: 1px solid #1dbf73;
+padding: 0 6px;
 }
