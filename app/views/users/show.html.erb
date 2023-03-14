@@ -3,18 +3,18 @@
 <p>Status: <%= @online ? 'online': 'offline' %></p>
 <div class="container">
   <%# profile card starts here %>
-  <div class="profile-card">
-    <div class="card">
-      <div class='text-center'>
-        <%# user photo goes here, class: avatar %>
-        <p><%= @username %></p>
-        <p><i class="fa-solid fa-pencil"></i></p>
-        <button style='border: 1px solid grey'>Contact Me</button>
-      </div>
-      <p><i class="fa-sharp fa-solid fa-location-dot"></i> From <%= @user.location %></p>
-      <p><i class="fa-solid fa-user"></i> Member since <%= @month_created %> <%= @user.created_at.year %></p>
-      <p><i class="fa-light fa-clock-three"></i> Avg. Response Time</p>
+  <div class="card-profile">
+    <div class='text-center'>
+      <img class='avatar-xl' src="https://www.w3schools.com/howto/img_avatar.png">
+      <p><%= @username %></p>
+      <button style='border: 1px solid grey'>Contact Me</button>
     </div>
+    <div class="user-stats-wrapper">
+      <ul class='user-stats'>
+        <li><span><i class="fa-sharp fa-solid fa-location-dot"></i> From</span> <strong><%= @user.location %></strong></li>
+        <li><span><i class="fa-solid fa-user"></i> Member since</span> <strong><%= @month_created %> <%= @user.created_at.year %></strong></li>
+        <li><span><i class="fa-regular fa-clock"></i> Avg. Response Time</span></li>
+      </ul>
+    </div>
+    <%# profile card ends here %>
   </div>
-  <%# profile card ends here %>
-</div>

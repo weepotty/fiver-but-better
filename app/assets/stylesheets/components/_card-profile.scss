@@ -1,0 +1,27 @@
+.card-profile {
+  border: 1px solid #dadbdd;
+  padding: 30px;
+}
+
+.card-profile .text-center p {
+  color: #222325;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-stats-wrapper {
+  border-top: 1px solid #dadbdd;
+margin-top: 24px;
+}
+
+.user-stats {
+  list-style: none;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.user-stats li {
+  display:flex;
+  justify-content: space-between;
+  color: #62646a;
+}
