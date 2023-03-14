@@ -17,12 +17,12 @@
                       required: true,
                       label: false,
                       placeholder: 'Enter your password',
-                      # hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: true,
                       label: false,
                       placeholder: 'Confirm your password',
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :location,
                       required: true,
