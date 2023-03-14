@@ -1,12 +1,16 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div class="flash flash-success alert alert-dismissible fade show m-1" role="alert">
     <%= notice %>
+    <a data-bs-dismiss="alert" aria-label="Close">
+      <i class="fa-sharp fa-solid fa-xmark ms-2"></i>
+    </a>
   </div>
 <% end %>
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div class="flash flash-warning alert alert-dismissible fade show m-1" role="alert">
     <%= alert %>
+    <a data-bs-dismiss="alert" aria-label="Close">
+      <i class="fa-sharp fa-solid fa-xmark ms-2"></i>
+    </a>
   </div>
 <% end %>
