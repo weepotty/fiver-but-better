@@ -1,6 +1,14 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <div class="container">
+  <div class="row">
+    <%# user info panel %>
+    <div class="col-4">
+    </div>
+    <%# user gig panel %>
+    <div class="col-8">
+    </div>
+  </div>
   <%= render 'card-profile' %>
 </div>
 <% if @user.services %>
@@ -15,13 +23,13 @@
         <p class="card-text"><%= service.title %></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
           <div>
             <i class="fa-solid fa-bars"></i>
             <i class="fa-solid fa-heart"></i>
           </div>
           <ul>
-            <li>STARTING AT</li>
+            <li class='text-small'>STARTING AT</li>
             <li>SGD <%= service.price/100 %></li>
           </ul>
         </li>
