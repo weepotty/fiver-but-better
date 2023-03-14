@@ -3,14 +3,9 @@
   padding: 30px;
 }
 
-.card-profile .text-center p {
-  color: #222325;
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .user-profile-info i {
-  color: #b5b6ba}
+  color: #b5b6ba;
+}
 
 .user-stats-wrapper {
   border-top: 1px solid #dadbdd;
@@ -23,7 +18,6 @@ margin-top: 24px;
   padding-top: 20px;
   padding-left: 0;
 }
-
 
 .user-stats li {
   display:flex;
@@ -38,4 +32,10 @@ margin-top: 24px;
  border-radius: 12px;
  border: 1px solid #1dbf73;
 padding: 0 6px;
+}
+
+.img-wrapper p {
+  color: #222325;
+  font-size: 20px;
+  font-weight: 700;
 }
