@@ -1,0 +1,52 @@
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 4px;
+}
+
+.bottom .left p {
+  text-align: center;
+  color: rgb(154, 154, 154);
+  font-size: smaller;
+  font-style: italic;
+  margin: 8px;
+}
+
+.bottom .left span {
+  text-align: center;
+  padding: 4px;
+  margin: 4px;
+}
+
+.bottom .left {
+  display: flex;
+}
+
+.bottom .right {
+  display: flex;
+}
+
+.bottom ul {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  color: gray;
+  margin: 4px;
+  padding: 4px;
+}
+
+.bottom li {
+  display: inline;
+}
+
+.bottom li a {
+  text-decoration: none;
+  color: gray;
+  font-size: larger;
+  margin: 8px;
+}
+
+.bottom a {
+  text-decoration: none;
+}
