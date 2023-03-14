@@ -1,13 +1,21 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<p>Status: <%= @online ? 'online': 'offline' %></p>
 <div class="container">
   <%# profile card starts here %>
   <div class="card-profile">
-    <div class='text-center'>
-      <img class='avatar-xl' src="https://www.w3schools.com/howto/img_avatar.png">
-      <p><%= @username %></p>
-      <button style='border: 1px solid grey'>Contact Me</button>
+    <div class='user-profile-info'>
+      <div class="d-flex justify-content-between">
+        <div>
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <img class='avatar-xl' src="https://www.w3schools.com/howto/img_avatar.png">
+        <p><%= @online ? 'Online': 'Offline' %></p>
+      </div>
+      <div class="text-center">
+        <p><%= @username %></p>
+        <button style='border: 1px solid grey'>Contact Me</button>
+      </div>
     </div>
     <div class="user-stats-wrapper">
       <ul class='user-stats'>
