@@ -72,3 +72,56 @@ h2 {
 .category-card > h3 > small {
   font-size: 1rem;
 }
+
+// Style for Proposition section.
+.proposition-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proposition-card {
+  width: 35%;
+}
+
+.proposition-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.proposition-card > h3 > span {
+  font-size: 1.4rem;
+  margin-right: 0.4rem;
+  color: gray;
+}
+
+.proposition-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: gray;
+}
+
+.proposition-video {
+  aspect-ratio: 16 / 10;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 35px;
+}
+
+.video-btn:hover {
+  color: white;
+}
