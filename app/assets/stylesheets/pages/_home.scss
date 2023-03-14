@@ -2,8 +2,11 @@
 h2 {
   font-size: 2.2rem;
   font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
+
+// Style settings for containers in the home page.
 .home-container {
   padding: 6rem;
 }
@@ -24,6 +27,7 @@ h2 {
   background-color: $light-gray;
 }
 
+// Styles for trusted-by bar below top banner.
 .trusted-by {
   width: 800px;
   margin: 0 auto;
@@ -44,4 +48,27 @@ h2 {
   display: inline;
   margin: 0 0 0 3rem;
   padding: 0;
+}
+
+// Styles for category cards
+.category-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-card {
+  color: white;
+  width: 230px;
+  height: 340px;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.category-card > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.category-card > h3 > small {
+  font-size: 1rem;
 }
