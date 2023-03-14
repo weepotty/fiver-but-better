@@ -14,7 +14,6 @@
   }
 }
 
-
 .btn-transparent-green {
   color: #1ebe73;
   &:hover {
@@ -37,5 +36,14 @@
   &:hover {
     background-color: #616469;
     color: white;
+  }
+}
+
+.btn-navbar {
+  color: #616469;
+  border: 0px;
+  font-weight: 800;
+  &:hover {
+    color: #1ebe73;
   }
 }
