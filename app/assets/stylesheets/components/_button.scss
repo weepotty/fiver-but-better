@@ -47,3 +47,13 @@
     color: #1ebe73;
   }
 }
+
+.btn-footer {
+  color: #616469;
+  border-radius: 50%;
+  border: 0px;
+  font-weight: 400;
+  &:hover {
+    background-color: #e4e5e7;
+  }
+}
