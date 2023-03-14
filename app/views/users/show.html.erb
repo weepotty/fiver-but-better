@@ -1,7 +1,14 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <div class="container">
-  <%# profile card starts here %>
   <%= render 'card-profile' %>
-  <%# profile card ends here %>
 </div>
+<% if @user.services %>
+  <% @user.services.each do |service| %>
+    <p><%= service.title %></p>
+    <p><%= service.description %></p>
+    <p><%= service.price %></p>
+    <p><%= service.delivery_time %></p>
+    <p><%= service.category %></p>
+  <% end %>
+<% end %>
