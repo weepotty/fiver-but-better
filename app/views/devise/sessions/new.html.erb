@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.6); position: absolute; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1">
   <div class="bg-white pt-4 pb-2" style="width: 400px; border-radius: 8px;">
     <div class="mx-4">
-      <h2 class="text-center fw-bold fs-3">Sign In to Fiverr</h2>
+      <h2 class="text-center fw-bold fs-3 mb-5">Sign In to Fiverr</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -10,12 +10,18 @@
                       autofocus: true,
                       label: false,
                       placeholder: 'Email',
-                      input_html: { autocomplete: "email" } %>
+                      input_html: {
+                        autocomplete: "email",
+                        class: "bg-white py-2"
+                      } %>
           <%= f.input :password,
                       required: false,
                       label: false,
                       placeholder: 'Password',
-                      input_html: { autocomplete: "current-password" } %>
+                      input_html: {
+                        autocomplete: "current-password",
+                        class: "bg-white py-2"
+                      } %>
         </div>
 
         <div class="form-actions mb-3">
