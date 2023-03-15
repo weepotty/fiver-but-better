@@ -11,7 +11,7 @@
         <% if @user.services %>
           <% @user.services.each do |service| %>
             <div class="col-4 mb-4">
-              <%= render 'service_card', service: service %>
+              <%= render 'service_card', service: service, user: @user %>
             </div>
           <% end %>
         <% end %>
