@@ -1,7 +1,11 @@
 <div class="payment-service-card">
   <div class="card-profile">
     <div class="service-price d-flex justify-content-between gap-4 pb-4 mb-4 border-bottom">
-      <%= cl_image_tag @service.photo.key, width: 100, height: 60 %>
+      <% if @service.photo.key%>
+        <%= cl_image_tag @service.photo.key, width: 100, height: 60 %>
+      <% else %>
+        <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852787/development/g9j2kjmajzgz1en4j20h42h3e8w3.jpg', width: 100, height: 60) %>
+      <% end %>
       <h3><%= @service.title %></h3>
     </div>
     <div class="service-price d-flex justify-content-between">
