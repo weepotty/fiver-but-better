@@ -2,12 +2,17 @@
   <h1>All Categories</h1>
   <p>This page currently shows all services of all categories</p>
 
-  <p>#number services available</p>
-  <% @services.each do |service| %>
-    <%= service.title %>
-    <%= service.description %>
-    <%= service.price %>
-    <%= service.delivery_time %>
-    <%= service.category %>
-  <% end %>
+  <%# Header for the services %>
+  <div class="services-header">
+    <p>#number services available</p>
+  </div>
+
+  <%# Grid for services cards %>
+  <div>
+    <% @services.each do |service| %>
+      <div class="col-4 mb-4">
+        <%= render 'users/service_card', service: service %>
+      </div>
+    <% end %>
+  </div>
 </div>
