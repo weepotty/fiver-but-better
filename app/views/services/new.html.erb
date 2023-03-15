@@ -1,10 +1,7 @@
-<div class="p-4 border w-50 mt-5 mx-auto">
-  <%= simple_form_for(@service) do |f| %>
-    <%= f.input :title, label: 'Gig Title' %>
-    <%= f.input :description, as: :text%>
-    <%= f.input :category, as: :select, collection: ['Graphics & Design', 'Digital Marketing', 'Writing & Translation', 'Video & Animation'], selected: "Graphics & Design" %>
-    <%= f.input :price %>
-    <%= f.input :delivery_time %>
-    <%= f.submit class: 'btn btn-green' %>
+<div class="p-4 border rounded w-50 mt-5 mx-auto">
+  <% if current_user %>
+    <%= render 'form' %>
+  <% else %>
+    <div class="text-center">Please sign in to view this form</div>
   <% end %>
 </div>
