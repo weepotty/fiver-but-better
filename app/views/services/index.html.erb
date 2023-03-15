@@ -1,11 +1,13 @@
+<div class="container">
+  <h1>All Categories</h1>
+  <p>This page currently shows all services of all categories</p>
 
-<h1>All Categories</h1>
-<p>This page currently shows all services of all categories</p>
-
-<% @services.each do |service| %>
-  <%= service.title %>
-  <%= service.description %>
-  <%= service.price %>
-  <%= service.delivery_time %>
-  <%= service.category %>
-<% end %>
+  <p>#number services available</p>
+  <% @services.each do |service| %>
+    <%= service.title %>
+    <%= service.description %>
+    <%= service.price %>
+    <%= service.delivery_time %>
+    <%= service.category %>
+  <% end %>
+</div>
