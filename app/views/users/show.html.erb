@@ -16,7 +16,9 @@
           <% end %>
         <% end %>
       </div>
-      <%= link_to "Create Gig", new_service_path, class: "btn btn-green w-25" %>
+      <% if @user == current_user %>
+        <%= link_to "Create Gig", new_service_path, class: "btn btn-green w-25" %>
+      <% end %>
     </div>
   </div>
 </div>
