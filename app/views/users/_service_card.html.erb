@@ -6,7 +6,11 @@
   <% end %>
   <div class="card-body">
     <div class='pb-2'>
-      <%= cl_image_tag user.photo.key ? user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
+      <% if current_user.photo.key%>
+        <%= cl_image_tag user.photo.key, class: 'avatar-xs' %>
+      <% else %>
+        <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852728/development/eikdtlh3ky8vfdi8cm216xts79e9.jpg', class: 'avatar-xs') %>
+      <% end %>
       <span><%= user.username %></span>
     </div>
     <p class="card-text"><%= service.title %></p>
