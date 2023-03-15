@@ -9,7 +9,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body class="min-vh-100 d-flex flex-column justify-content-start">
-    <%= render "shared/navbar" %>
+    <% unless action_name == "new" %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/flashes" %>
     <div class="flex-grow-1">
       <% if user_signed_in? %>
@@ -19,6 +21,8 @@
       <% end %>
       <%= yield %>
     </div>
-    <%= render "shared/footer" %>
+    <% unless action_name == "new" %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
