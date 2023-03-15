@@ -128,16 +128,16 @@ h2 {
 
 // Style for category list section
 .category-list {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .category-list-item {
-  display: inline;
-  margin: 2rem;
-  padding: 0;
+  display: inline-block;
+  margin: 3.5rem;
 }
 
 .category-list-item a {
