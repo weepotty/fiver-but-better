@@ -27,12 +27,21 @@ margin-top: 24px;
   margin-bottom: 16px;
 }
 
-.card-profile .online-status {
+.card-profile .online {
  color: #1dbf73;
  border-radius: 12px;
  border: 1px solid #1dbf73;
 padding: 0 6px;
+font-size: 0.75rem;
 }
+
+.card-profile .offline {
+  color: #bf1d1d;
+  border-radius: 12px;
+  border: 1px solid #bf1d1d;
+ padding: 0 6px;
+ font-size: 0.75rem;
+ }
 
 .img-wrapper p {
   color: #222325;

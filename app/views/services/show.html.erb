@@ -1,10 +1,11 @@
-<h1>hi from show</h1>
-
-
-<%= cl_image_tag @service.photo.key,  height: 300, width: 400, crop: :fill %>
-<%= @service.title %>
-<%= @service.description %>
-<%= @service.price/100 %>
-<%= @service.delivery_time %>
-<%= @service.seller.email.match(/.+(?=@)/) %>
-<%= @service.seller.location %>
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+      <%= render "service-details" %>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-4">
+      <%= render "service-card" %>
+    </div>
+  </div>
+</div>
