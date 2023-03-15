@@ -1,10 +1,12 @@
 <div class="container">
+  <br>
+  <br>
   <h1>All Categories</h1>
   <p>This page currently shows all services of all categories</p>
 
   <%# Header for the services %>
   <div class="services-header">
-    <p>#number services available</p>
+    <p><%= @services.count %> services available</p>
   </div>
 
   <%# Grid for services cards %>
