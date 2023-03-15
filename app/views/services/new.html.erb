@@ -1,0 +1,7 @@
+<div class="p-4 border rounded w-50 mt-5 mx-auto">
+  <% if current_user %>
+    <%= render 'form' %>
+  <% else %>
+    <div class="text-center">Please sign in to view this form</div>
+  <% end %>
+</div>

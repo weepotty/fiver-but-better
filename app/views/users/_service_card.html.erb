@@ -1,5 +1,5 @@
 <div class="card">
-  <%= cl_image_tag service.photo.key, class: 'card-img-top'%>
+  <%= cl_image_tag service.photo.key ? service.photo.key : ('g9j2kjmajzgz1en4j20h42h3e8w3'), class: 'card-img-top'%>
   <div class="card-body">
     <div class='pb-2'>
       <%= cl_image_tag user.photo.key ? user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
