@@ -22,6 +22,12 @@
           <a class="nav-link" href="/users/<%= current_user.id %>"><%= cl_image_tag current_user.photo.key ? current_user.photo.key : ("tg9fkn8640h57hawm7qlaxuj1a46"), class: 'avatar-xs' %></a>
         </li>
       <% end %>
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-transparent-green" %>
+      <% else %>
+        <div class="nav-item"><%= link_to "Sign in", new_user_session_path, class: "btn nav-link", style: "border: none; color: black" %></div>
+        <div class="nav-item"><%= link_to "Join", new_user_registration_path, class: "btn nav-link btn-transparent-green" %></div>
+      <% end %>
     </ul>
   </nav>
 </div>
