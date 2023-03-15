@@ -6,11 +6,15 @@
         <i class="fa-solid fa-heart"></i>
       </div>
       <div class="img-wrapper">
-        <%= cl_image_tag @user.photo.key, class: 'avatar-xl' %>
+        <%= cl_image_tag @user.photo.key ? @user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xl' %>
         <p class='text-center pt-2'><%= @username %></p>
       </div>
       <div>
-        <p class="online-status"><%= @online ? 'Online': 'Offline' %></p>
+        <% if @user.online? %>
+          <p class="online">&#183 Online</p>
+        <% else %>
+          <p class="offline">&#183 Offline</p>
+        <% end %>
       </div>
     </div>
   </div>
