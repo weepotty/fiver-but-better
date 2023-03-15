@@ -4,5 +4,5 @@
   <%= f.input :category, as: :select, collection: ['Graphics & Design', 'Digital Marketing', 'Writing & Translation', 'Video & Animation'], selected: "Graphics & Design" %>
   <%= f.input :price, label: 'Price', placeholder: '$ (SGD)' %>
   <%= f.input :delivery_time, label: 'Delivery time (days)', placeholder: 'Enter a number from 1 to 90' %>
-  <%= f.submit class: 'btn btn-green' %>
+  <%= f.submit 'Create Gig', class: 'btn btn-green' %>
 <% end %>
