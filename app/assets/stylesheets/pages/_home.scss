@@ -125,3 +125,49 @@ h2 {
 .video-btn:hover {
   color: white;
 }
+
+// Style for category list section
+.category-list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-list-item {
+  display: inline;
+  margin: 2rem;
+  padding: 0;
+}
+
+.category-list-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-list-item a:hover {
+  color: black;
+}
+
+.category-list-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.category-list-item > a > div {
+  width: 50px;
+  height: 1px;
+  border-bottom: 2px solid gray;
+  margin: 0.4rem 0;
+  transform: scaleX(1);
+  transition: transform ease 0.1s;
+}
+
+.category-list-item > a:hover > div {
+  border-bottom: 2px solid $green;
+  transform: scaleX(2);
+}
