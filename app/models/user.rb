@@ -10,6 +10,6 @@ class User < ApplicationRecord
   validates :location, presence: true
 
   def online?
-    updated_at > 2.minutes.ago
+    updated_at > 5.minutes.ago
   end
 end
