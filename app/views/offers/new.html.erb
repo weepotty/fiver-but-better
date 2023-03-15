@@ -6,12 +6,6 @@
     <div class="col-1"></div>
     <div class="col-4">
       <%= render "checkout-card" %>
-          <%= simple_form_for [@service, @offer] do |f| %>
-            <%= f.input :final_price, data: { placeholder: @service.price/100 }, input_html: {:value => @service.price/100, readonly: true} %>
-            <%= f.input :final_delivery_time, input_html: {:value => @service.delivery_time, readonly: true} %>
-            <%= f.input :description %>
-            <%= f.submit %>
-          <% end %>
     </div>
   </div>
 </div>
