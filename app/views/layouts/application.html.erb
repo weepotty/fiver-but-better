@@ -16,7 +16,9 @@
     <% else %>
       <%= link_to "Login", new_user_session_path, class: "btn btn-green" %>
     <% end %>
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>
