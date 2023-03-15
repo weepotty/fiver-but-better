@@ -1,26 +1,34 @@
 <div class="card">
   <a href=<%= service_path(service) %>>
-    <%= cl_image_tag service.photo.key ? service.photo.key : ('g9j2kjmajzgz1en4j20h42h3e8w3'), class: 'card-img-top'%>
+     <% if service.photo.key%>
+    <%= cl_image_tag service.photo.key, class: "mb-4", class: 'card-img-top' %>
+  <% else %>
+    <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852787/development/g9j2kjmajzgz1en4j20h42h3e8w3.jpg', class: 'card-img-top') %>
+  <% end %>
   </a>
-  <div class="card-body">
-    <div class='pb-2'>
-      <%= cl_image_tag user.photo.key ? user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
-      <a class="text-decoration-none text-dark" href=<%= user_path(user) %> ><%= user.username %></a>
-    </div>
-    <a class="text-decoration-none text-dark"href=<%= service_path(service) %>>
-      <p class="card-text"><%= service.title %></p>
-    </a>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <div>
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-heart"></i>
+    <div class="card-body">
+      <div class='pb-2'>
+        <% if current_user.photo.key%>
+          <%= cl_image_tag user.photo.key, class: 'avatar-xs' %>
+        <% else %>
+          <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852728/development/eikdtlh3ky8vfdi8cm216xts79e9.jpg', class: 'avatar-xs') %>
+        <% end %>
+        <a class="text-decoration-none text-dark" href=<%= user_path(user) %> ><%= user.username %></a>
       </div>
-      <ul>
-        <li class='text-small'>STARTING AT</li>
-        <li>SGD <%= service.price/100 %></li>
-      </ul>
-    </li>
-  </ul>
-</div>
+      <a class="text-decoration-none text-dark"href=<%= service_path(service) %>>
+      <p class="card-text"><%= service.title %></p>
+      </a>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <ul>
+          <li class='text-small'>STARTING AT</li>
+          <li>SGD <%= service.price/100 %></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
