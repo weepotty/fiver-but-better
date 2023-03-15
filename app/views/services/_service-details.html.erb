@@ -15,10 +15,14 @@
   <div class="seller-tag">
     <div class="d-flex gap-3 mt-4 mb-4">
       <div class="seller-avatar">
-        <%= cl_image_tag @service.seller.photo.key ? @service.seller.photo.key : ("tg9fkn8640h57hawm7qlaxuj1a46") , class: "avatar-large"%>
+        <% if @service.seller.photo.key %>
+          <%= cl_image_tag @service.seller.photo.key, class: "avatar-large" %>
+        <% else %>
+          <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852728/development/eikdtlh3ky8vfdi8cm216xts79e9.jpg', class: "avatar-large") %>
+        <% end %>
       </div>
       <div class="seller-details">
-        <%= link_to @service.seller.email.match(/.+(?=@)/), user_path %>
+        <%= link_to @service.seller.username, user_path(@service.seller) %>
         <a href="#" class="d-block btn btn-transparent mt-3">Contact Me</a>
       </div>
     </div>
