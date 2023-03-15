@@ -10,7 +10,11 @@
         <p class='text-center pt-2'><%= @username %></p>
       </div>
       <div>
-        <p class="online-status"><%= @online ? 'Online': 'Offline' %></p>
+        <% if @online %>
+          <p class="online">Online</p>
+        <% else %>
+          <p class="offline">Offline</p>
+        <% end %>
       </div>
     </div>
   </div>
