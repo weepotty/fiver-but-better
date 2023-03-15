@@ -16,4 +16,9 @@ class User < ApplicationRecord
   def username
     email.split('@').first
   end
+
+  def country
+    country = ISO3166::Country[location]
+    country.translations[I18n.locale.to_s] || country.name
+  end
 end
