@@ -18,7 +18,9 @@ class User < ApplicationRecord
   end
 
   def country
-    country = ISO3166::Country[location]
-    country.translations[I18n.locale.to_s] || country.name
+    country_name = ISO3166::Country[location]
+    return location unless country_name
+
+    country_name.translations[I18n.locale.to_s]
   end
 end
