@@ -1,11 +1,12 @@
 <div class="card">
-  <a href=<%= service_path(service) %>>
-     <% if service.photo.key%>
-    <%= cl_image_tag service.photo.key, class: "mb-4", class: 'card-img-top' %>
-  <% else %>
-    <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852787/development/g9j2kjmajzgz1en4j20h42h3e8w3.jpg', class: 'card-img-top') %>
+  <%= link_to service_path(service) do %>
+    <% if service.photo.key%>
+      <%= cl_image_tag service.photo.key, class: 'card-img-top' %>
+    <% else %>
+      <%= image_tag('https://res.cloudinary.com/drftmp0s5/image/upload/v1678852787/development/g9j2kjmajzgz1en4j20h42h3e8w3.jpg', class: 'card-img-top') %>
+    <% end %>
   <% end %>
-  </a>
+  <div class="card-content">
     <div class="card-body">
       <div class='pb-2'>
         <% if user.photo.key%>
@@ -15,8 +16,8 @@
         <% end %>
         <a class="text-decoration-none text-dark" href=<%= user_path(user) %> ><%= user.username %></a>
       </div>
-      <a class="text-decoration-none text-dark"href=<%= service_path(service) %>>
-      <p class="card-text"><%= service.title %></p>
+      <a class="text-decoration-none text-dark" href=<%= service_path(service) %>>
+        <p class="card-text"><%= service.title %></p>
       </a>
     </div>
     <ul class="list-group list-group-flush">
@@ -32,3 +33,4 @@
       </li>
     </ul>
   </div>
+</div>
