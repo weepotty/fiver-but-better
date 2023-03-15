@@ -11,7 +11,7 @@
   <div>
     <% @services.each do |service| %>
       <div class="col-4 mb-4">
-        <%= render 'users/service_card', service: service %>
+        <%= render 'users/service_card', service: service, user: service.seller %>
       </div>
     <% end %>
   </div>
