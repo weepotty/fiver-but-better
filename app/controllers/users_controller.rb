@@ -5,5 +5,4 @@ class UsersController < ApplicationController
     @month_created = Date::MONTHNAMES[@user.created_at.month]
     @username = @user.email.split('@').first
   end
-
 end
