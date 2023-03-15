@@ -2,7 +2,7 @@
   <%= cl_image_tag service.photo.key, class: 'card-img-top'%>
   <div class="card-body">
     <div class='pb-2'>
-      <%= cl_image_tag @user.photo.key ? @user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
+      <%= cl_image_tag user.photo.key ? user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
       <span><%= @username %></span>
     </div>
     <p class="card-text"><%= service.title %></p>
