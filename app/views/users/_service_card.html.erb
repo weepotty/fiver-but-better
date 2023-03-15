@@ -7,7 +7,7 @@
       <%= cl_image_tag user.photo.key ? user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xs' %>
       <a class="text-decoration-none text-dark" href=<%= user_path(user) %> ><%= user.username %></a>
     </div>
-    <a class="text-decoration-none" href=<%= service_path(service) %>>
+    <a class="text-decoration-none text-dark"href=<%= service_path(service) %>>
       <p class="card-text"><%= service.title %></p>
     </a>
   </div>
