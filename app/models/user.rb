@@ -12,4 +12,8 @@ class User < ApplicationRecord
   def online?
     updated_at > 5.minutes.ago
   end
+
+  def username
+    email.split('@').first
+  end
 end
