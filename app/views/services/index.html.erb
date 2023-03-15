@@ -8,9 +8,9 @@
   </div>
 
   <%# Grid for services cards %>
-  <div>
+  <div class="row">
     <% @services.each do |service| %>
-      <div class="col-4 mb-4">
+      <div class="col-3 mb-4">
         <%= render 'users/service_card', service: service, user: service.seller %>
       </div>
     <% end %>
