@@ -7,7 +7,7 @@
       </div>
       <div class="img-wrapper">
         <%= cl_image_tag @user.photo.key ? @user.photo.key : ('tg9fkn8640h57hawm7qlaxuj1a46'), class: 'avatar-xl' %>
-        <p class='text-center pt-2'><%= @username %></p>
+        <p class='text-center pt-2'><%= @user.username %></p>
       </div>
       <div>
         <% if @user.online? %>
