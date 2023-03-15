@@ -12,9 +12,8 @@ class ServicesController < ApplicationController
   end
 
   def create
-    raise
     @service = Service.new(service_params)
-    @service[:price] = service[:price].to_i * 100
+    @service[:price] = @service[:price].to_i * 100
     @service.seller = current_user
 
     if @service.save
