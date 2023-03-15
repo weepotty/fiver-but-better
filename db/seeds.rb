@@ -1,6 +1,6 @@
-User.destroy_all
-Service.destroy_all
 Offer.destroy_all
+Service.destroy_all
+User.destroy_all
 
 buyer1_avatar = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1678766973/avatar-1_irvnls.jpg")
 buyer1 = User.new(email: 'alice@alicedev.com', password: '123456', location: 'Singapore')
