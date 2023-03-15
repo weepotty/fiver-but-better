@@ -1,22 +1,5 @@
 <div class="container">
   <br>
   <br>
-  <div class="services-list">
-    <h1>All Categories</h1>
-    <p class="fs-5">This page currently shows all services of all categories</p>
-
-    <%# Header for the services %>
-    <div class="services-header">
-      <p class="fs-6"><%= @services.count %> services available</p>
-    </div>
-
-    <%# Grid for services cards %>
-    <div class="row">
-      <% @services.each do |service| %>
-        <div class="col-3 mb-4">
-          <%= render 'users/service_card', service: service, user: service.seller %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render "shared/services", services: @services %>
 </div>
