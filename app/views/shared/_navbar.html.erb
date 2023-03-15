@@ -19,7 +19,7 @@
       </li>
       <% if current_user %>
         <li class="nav-item">
-          <a class="nav-link" href="#"><%= cl_image_tag current_user.photo.key, class: 'avatar-xs' %></a>
+          <a class="nav-link" href="#"><%= cl_image_tag current_user.photo.key ? current_user.photo.key : ("tg9fkn8640h57hawm7qlaxuj1a46"), class: 'avatar-xs' %></a>
         </li>
       <% end %>
     </ul>
