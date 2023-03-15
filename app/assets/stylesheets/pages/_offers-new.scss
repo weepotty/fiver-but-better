@@ -1,0 +1,50 @@
+// #nav#offers-new, #footer#offers-new {
+//   display: none !important;
+// }
+
+.payment-details {
+  border-radius: 5px;
+}
+
+.payment-header h1{
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 20px;
+}
+
+.payment-options {
+  padding: 20px 20px;
+}
+
+.payment-options img{
+  width: 80px;
+  height: 40px;
+}
+
+.credit-card-form {
+  box-shadow: inset 2px 2px 10px rgba($color: #656565, $alpha: .05)
+}
+
+form {
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 30px 50px;
+  color: #616469;
+}
+
+form label{
+  margin-bottom: 15px;
+}
+
+.exp, .cvc {
+  width: 50%
+}
+
+.form-input-long {
+  width: 250px
+}
+
+.radio {
+  margin-top: 10px;
+}
