@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4">
   <div class="row">
     <%# user info panel %>
     <div class="col-4 mr-4">
@@ -6,16 +6,19 @@
     </div>
     <%# user gig panel %>
     <div class="col-8 user-gig-panel">
-      <h2><%= @username %>'s Gigs</h2>
+      <h2><%= @user.username %>'s Gigs</h2>
       <div class="row">
         <% if @user.services %>
           <% @user.services.each do |service| %>
             <div class="col-4 mb-4">
-              <%= render 'service_card', service: service %>
+              <%= render 'service_card', service: service, user: @user %>
             </div>
           <% end %>
         <% end %>
       </div>
+      <% if @user == current_user %>
+        <%= link_to "Create Gig", new_service_path, class: "btn btn-green w-25" %>
+      <% end %>
     </div>
   </div>
 </div>

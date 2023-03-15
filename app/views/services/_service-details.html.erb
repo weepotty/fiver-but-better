@@ -1,6 +1,6 @@
 <div class="service-intro m-4">
   <h1 class="mb-4"><%= @service.title %></h1>
-  <%= cl_image_tag @service.photo.key, class: "mb-4", height: 450, width: 700, crop: :fill %>
+  <%= cl_image_tag @service.photo.key ? @service.photo.key : ('g9j2kjmajzgz1en4j20h42h3e8w3'), class: "mb-4", height: 450, width: 700, crop: :fill %>
 </div>
 <div class="service-description m-4 border-bottom">
   <h2>About This Gig</h2>
