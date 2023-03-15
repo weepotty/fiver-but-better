@@ -5,10 +5,8 @@
   <div class="bg-white pt-4 pb-2" style="width: 420px; border-radius: 8px; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);">
     <div class="mx-4">
       <h2 class="text-center fw-bold fs-3 mb-4">Join Fiverr</h2>
-
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%#= f.error_notification %>
-
         <div class="form-inputs">
           <%= f.input :email,
                       required: true,
@@ -36,28 +34,23 @@
                         autocomplete: "new-password",
                         class: "bg-white py-2"
                       } %>
-          <%= f.input :location,
+          <%= f.country_select :location, priority_countries: ["Singapore"],
                       required: true,
                       label: false,
                       placeholder: 'Enter your location',
                       input_html: {
-                        autocomplete: "location",
-                        class: "bg-white py-2"
+                        autocomplete: "location"
                       } %>
         </div>
-
         <div class="form-actions mb-3">
           <%= f.button :submit, "Continue", class: "btn btn-green w-100" %>
         </div>
-
         <p class="text-center my-3 text-secondary">By joining I agree to receive emails from Fiverr.</p>
       <% end %>
     </div>
-
     <div class="w-100 border border-bottom border-muted"></div>
     <p class="text-center my-3 text-secondary">Already a member? <%= link_to "Sign in", new_user_session_path, class: "link-green" %></p>
     <a href="/" class="btn btn-transparent-green d-block w-25 mb-3" style="margin: 0 auto">Cancel</a>
   </div>
 </div>
-
 <%#= render "devise/shared/links" %>
