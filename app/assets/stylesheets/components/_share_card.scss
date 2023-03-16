@@ -32,7 +32,20 @@ ul.social-mediums {
 }
 #link-icon {
   border: 2px solid lightgray;
-padding: 12px;
-width: 60px;
-height: 60px;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+}
+
+.share-card path {
+  fill: #999999;
+
+}
+
+#link-icon:hover path{
+  cursor:pointer;
+fill: gray;
+}
+#link-icon:hover {
+  border:2px solid gray;
 }
