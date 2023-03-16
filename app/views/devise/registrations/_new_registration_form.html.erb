@@ -1,0 +1,55 @@
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
+    <div class="modal-content" style="border-radius: 8px;">
+      <div class="modal-body p-0">
+        <div class="mt-4">
+          <h2 class="text-center fw-bold fs-3 mb-4">Join Fiverr</h2>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          label: false,
+                          placeholder: 'Enter your email',
+                          input_html: {
+                            autocomplete: "email",
+                            class: "bg-white py-2"
+                          }%>
+              <%= f.input :password,
+                          required: true,
+                          label: false,
+                          placeholder: 'Enter your password',
+                          input_html: {
+                            autocomplete: "new-password",
+                            class: "bg-white py-2"
+                          } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          label: false,
+                          placeholder: 'Confirm your password',
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: {
+                            autocomplete: "new-password",
+                            class: "bg-white py-2"
+                          } %>
+              <%= f.country_select :location, priority_countries: ["Singapore"],
+                          required: true,
+                          label: false,
+                          placeholder: 'Enter your location',
+                          input_html: {
+                            autocomplete: "location"
+                          } %>
+              <%= f.input :photo, as: :file, label: "Upload your photo", input_html: { class: "bg-white py-1" }, wrapper_html: { class: "fs-6 mt-2 text-dark fw-normal" } %>
+            </div>
+            <div class="form-actions mb-3">
+              <%= f.button :submit, "Continue", class: "btn btn-green w-100" %>
+            </div>
+            <p class="text-center my-3 text-secondary">By joining I agree to receive emails from Fiverr.</p>
+          <% end %>
+        </div>
+        <div class="w-100 border border-bottom border-muted"></div>
+        <p class="text-center my-3 text-secondary">Already a member? <span class="link-green" data-bs-target="#loginModal" data-bs-toggle="modal">Sign in</span></p>
+      </div>
+    </div>
+  </div>
+</div>

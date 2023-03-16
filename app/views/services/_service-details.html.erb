@@ -23,7 +23,9 @@
       </div>
       <div class="seller-details">
         <%= link_to @service.seller.username, user_path(@service.seller) %>
-        <a href="#" class="d-block btn btn-transparent mt-3">Contact Me</a>
+        <% unless current_user == @service.seller %>
+          <a href="#" class="d-block btn btn-transparent mt-3">Contact Me</a>
+        <% end %>
       </div>
     </div>
     <div class="seller-details border d-flex flex-wrap justify-content-between gap-3 m-1 p-4">
