@@ -21,3 +21,7 @@ nav.navbar{
 .logo>img:hover {
   filter: invert(56%) sepia(80%) saturate(300%) hue-rotate(90deg) brightness(94%) contrast(80%);
 }
+
+.nav-wrapper .nav-category {
+  display: flex;
+}
