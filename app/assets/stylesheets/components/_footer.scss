@@ -43,11 +43,17 @@
 
 .bottom li a {
   text-decoration: none;
-  color: gray;
+  color: #808080;
   font-size: larger;
   margin: 8px;
 }
 
 .bottom a {
   text-decoration: none;
+}
+
+span img {
+  width: 120px;
+  height: 70px;
+  filter: invert(52%) sepia(4%) saturate(12%) hue-rotate(334deg) brightness(95%) contrast(87%);
 }

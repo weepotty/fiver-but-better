@@ -15,5 +15,9 @@ nav.navbar{
 }
 
 .logo>img {
-  filter: invert(56%) sepia(90%) saturate(416%) hue-rotate(100deg) brightness(91%) contrast(84%);
+  transition: ease-in-out 0.3s;
+}
+
+.logo>img:hover {
+  filter: invert(56%) sepia(80%) saturate(300%) hue-rotate(90deg) brightness(94%) contrast(80%);
 }
