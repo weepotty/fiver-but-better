@@ -24,7 +24,9 @@
 
 .item-cards-three {
   display: flex;
+  justify-content: end;
   gap: 15px;
+  margin-right: 20px;
 }
 
 .user-suggestion-card .item-card {
@@ -43,4 +45,9 @@
 
 .user-suggestion-card .item-card>span {
   font-size: 0.9em;
+}
+
+#carouselControl {
+  overflow: hidden;
+  width: 510px;
 }
