@@ -2,6 +2,7 @@ class OffersController < ApplicationController
   def new
     @service = Service.find(params[:service_id])
     @offer = Offer.new
+    authorize @offer
   end
 
   def create
@@ -12,17 +13,22 @@ class OffersController < ApplicationController
     @offer.buyer = current_user
     @service = Service.find(params[:service_id])
     @offer.service = @service
+    authorize @offer
 
-    if @offer.save
-      redirect_to service_path(@service), notice: "Offer was successfully created"
-    else
-      render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
-    end
+    check_offer_validity
   end
 
   private
 
   def create_offer
     params.require(:offer).permit(:final_price, :final_delivery_time, :description, :buyer_id, :service_id)
+  end
+
+  def check_offer_validity
+    if @offer.save
+      redirect_to service_path(@service), notice: "Offer was successfully created"
+    else
+      render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
+    end
   end
 end
