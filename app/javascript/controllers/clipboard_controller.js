@@ -5,4 +5,8 @@ export default class extends Controller {
   connect() {
     console.log("hello");
   }
+
+  copyToClipboard() {
+    navigator.clipboard.writeText(window.location.href);
+  }
 }
