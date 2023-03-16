@@ -13,6 +13,7 @@
       <%= render "shared/navbar" %>
       <% unless user_signed_in? %>
         <%= render 'devise/sessions/new_session_form', resource: User.new, resource_name: :user, devise_mapping: Devise.mappings[:user] %>
+        <%= render 'devise/registrations/new_registration_form', resource: User.new, resource_name: :user, devise_mapping: Devise.mappings[:user] %>
       <% end %>
     <% end %>
 

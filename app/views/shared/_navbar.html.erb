@@ -31,8 +31,8 @@
       <% if user_signed_in? %>
         <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-transparent-green" %>
       <% else %>
-        <button type="button" class="btn nav-link px-3 rounded-4" style="border: none; color: black" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
-        <div class="nav-item"><%= link_to "Join", new_user_registration_path, class: "btn nav-link btn-transparent-green" %></div>
+        <button type="button" class="btn nav-link" style="border: none; color: black" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
+        <button type="button" class="btn nav-link btn-transparent-green" data-bs-toggle="modal" data-bs-target="#signupModal">Join</button>
       <% end %>
     </ul>
   </nav>
