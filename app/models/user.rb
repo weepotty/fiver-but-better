@@ -26,10 +26,13 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(access_token)
+    require 'open-uri'
     data = access_token.info
     account = User.where(email: data['email']).first
     account ||= User.new(email: data['email'], password: Devise.friendly_token[0, 20])
     account.location = "Singapore"
+    image = URI.open(data['image'])
+    account.photo.attach(io: image, filename: data['image'], content_type: "image/jpg")
     account.save
     account
   end
