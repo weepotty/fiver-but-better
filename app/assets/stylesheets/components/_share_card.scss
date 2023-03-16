@@ -39,7 +39,6 @@ ul.social-mediums {
 
 .share-card path {
   fill: #999999;
-
 }
 
 #link-icon:hover path{
@@ -48,4 +47,5 @@ fill: gray;
 }
 #link-icon:hover {
   border:2px solid gray;
+  cursor: pointer;
 }
