@@ -13,12 +13,14 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    authorize @service
   end
 
   def create
     @service = Service.new(service_params)
     @service[:price] = @service[:price].to_i * 100
     @service.seller = current_user
+    authorize @service
 
     if @service.save
       redirect_to service_path(@service), notice: "Service was successfully created"
