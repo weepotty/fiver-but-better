@@ -10,6 +10,4 @@ class Service < ApplicationRecord
   validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 500, less_than: 100_000_000 }
   validates :delivery_time, numericality: { only_integer: true }, inclusion: { in: (1..90) }
   validates :category, inclusion: { in: CATEGORIES }
-
-  # enum :category, %i[graphicdesign digitalmarketing writingtranslation videoanimation musicudio programmingtech business style data photography]
 end
