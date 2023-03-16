@@ -33,12 +33,11 @@ font-size: 2rem;
 }
 
 .share-card ul li:hover {
-  filter: brightness(90%);
+  filter: brightness(80%);
   transition: ease-in-out 0.3s;
 }
 
 #link-icon {
-  // border: 2px solid lightgray;
   padding: 8px;
   width: 60px;
   height: 60px;
@@ -56,4 +55,12 @@ font-size: 2rem;
 
 .share-card .confirmation-message {
   color: #1EBE73
+}
+
+#shareModal .modal-content {
+  width: 800px;
+}
+
+#shareModal .modal-header {
+  border: none
 }

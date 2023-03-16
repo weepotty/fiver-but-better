@@ -1,24 +1,32 @@
-<div data-controller='clipboard' class="card share-card p-4 text-center rounded">
-  <h2>Share This Gig</h2>
-  <p>Spread the word about this Gig on Fiver-But-Better</p>
-  <ul class="social-mediums d-flex justify-content-center">
-    <li>
-      <%= image_tag("whatsapp-logo.svg") %>
-    </li>
-    <li>
-      <%= image_tag("twitter-logo.svg") %>
-    </li>
-    <li>
-      <%= image_tag("facebook-logo.svg") %>
-    </li>
-    <li>
-      <%= image_tag("linkedin-logo.svg", width: '54px', height: '54px', class:'pt-1 mx-1') %>
-    </li>
-    <li data-action='click->clipboard#copyToClipboard'>
-      <svg version="1.1" id="link-icon" x="0px" y="0px"
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
+    <div class="modal-content pb-4" style="border-radius: 8px;">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div>
+          <div data-controller='clipboard' class="share-card text-center">
+            <h2>Share This Gig</h2>
+            <p>Spread the word about this Gig on Fiver-But-Better</p>
+            <ul class="social-mediums d-flex justify-content-center">
+              <li>
+                <%= image_tag("whatsapp-logo.svg") %>
+              </li>
+              <li>
+                <%= image_tag("twitter-logo.svg") %>
+              </li>
+              <li>
+                <%= image_tag("facebook-logo.svg") %>
+              </li>
+              <li>
+                <%= image_tag("linkedin-logo.svg", width: '54px', height: '54px', class:'pt-1 mx-1') %>
+              </li>
+              <li data-action='click->clipboard#copyToClipboard'>
+                <svg version="1.1" id="link-icon" x="0px" y="0px"
           viewBox="0 0 457.03 457.03"
            xml:space="preserve">
-        <path d="M421.512,207.074l-85.795,85.767c-47.352,47.38-124.169,47.38-171.529,0c-7.46-7.439-13.296-15.821-18.421-24.465
+                  <path d="M421.512,207.074l-85.795,85.767c-47.352,47.38-124.169,47.38-171.529,0c-7.46-7.439-13.296-15.821-18.421-24.465
             l39.864-39.861c1.895-1.911,4.235-3.006,6.471-4.296c2.756,9.416,7.567,18.33,14.972,25.736c23.648,23.667,62.128,23.634,85.762,0
             l85.768-85.765c23.666-23.664,23.666-62.135,0-85.781c-23.635-23.646-62.105-23.646-85.768,0l-30.499,30.532
             c-24.75-9.637-51.415-12.228-77.373-8.424l64.991-64.989c47.38-47.371,124.177-47.371,171.557,0
@@ -28,8 +36,13 @@
             c-5.092-8.678-10.958-17.03-18.421-24.477c-47.348-47.371-124.172-47.371-171.543,0L35.526,249.96
             c-47.366,47.385-47.366,124.172,0,171.553c47.371,47.356,124.177,47.356,171.547,0l65.008-65.003
             C246.109,360.336,219.437,357.723,194.708,348.104z"/>
-      </svg>
-    </li>
-  </ul>
-  <p data-clipboard-target = 'confirmation' class='d-none confirmation-message align-self-end'>Copied to clipboard!</p>
+                </svg>
+              </li>
+            </ul>
+            <p data-clipboard-target = 'confirmation' class='d-none confirmation-message'>Copied to clipboard!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

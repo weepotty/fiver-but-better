@@ -7,8 +7,11 @@
   <% end %>
 </div>
 <div class="service-description m-4 border-bottom">
-  <h2>About This Gig</h2>
+  <div class="d-flex justify-content-between align-items-center">
+    <h2 class='m-0'>About This Gig </h2>
+  </div>
   <p class="pt-4 pb-4"><%= @service.description %></p>
+  <p><button type="button" class="btn btn-transparent-green" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid fa-share-from-square"></i> Share</button></p>
 </div>
 <div class="seller m-4 pt-4">
   <h2>About The Seller</h2>
