@@ -1,6 +1,6 @@
 <div class="services-list">
-  <h1 class="fw-bold">All Categories</h1>
-  <p class="fs-5">This page currently shows all services of all categories</p>
+  <h1 class="fw-bold"><%= @category.nil? ? "All Categories" : @category  %></h1>
+  <p class="fs-5">This page currently shows all services available for <%= @category.nil? ? "All Categories" : @category  %></p>
 
   <%# Header for the services %>
   <div class="services-header">
