@@ -1,8 +1,8 @@
 <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
-    <div class="modal-content" style="border-radius: 20px;">
+    <div class="modal-content" style="border-radius: 8px;">
       <div class="modal-body p-0">
-        <div class="mt-5">
+        <div class="mt-4">
           <h2 class="text-center fw-bold fs-3 mb-2">Join Fiverr</h2>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <div class="form-inputs">
@@ -48,7 +48,7 @@
           <% end %>
         </div>
         <div class="w-100 border border-bottom border-muted"></div>
-        <p class="text-center my-3 text-secondary">Already a member? <span class="link green-link" data-bs-target="#loginModal" data-bs-toggle="modal">Sign in</span></p>
+        <p class="text-center my-3 text-secondary">Already a member? <span class="link-green" data-bs-target="#loginModal" data-bs-toggle="modal">Sign in</span></p>
       </div>
     </div>
   </div>
