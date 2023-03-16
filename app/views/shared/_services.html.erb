@@ -1,10 +1,5 @@
 <div class="services-list">
-  <% if @query %>
-    <h1 class="fw-bold">Results for "<%= @query %>"</h1>
-  <% else %>
-    <h1 class="fw-bold"><%= @category.nil? ? "All Categories" : @category  %></h1>
-    <p class="fs-5">This page currently shows all services available for <%= @category.nil? ? "All Categories" : @category  %></p>
-  <% end %>
+  <%= render 'shared/services_header' %>
 
   <%# Header for the services %>
   <div class="services-header">
