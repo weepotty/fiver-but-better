@@ -3,7 +3,7 @@
 
   <%# Header for the services %>
   <div class="services-header">
-    <p class="fs-6"><%= services.count %> services available</p>
+    <p class="fs-6"><%= "#{services.count} #{'service'.pluralize(services.count)}" %> available</p>
   </div>
 
   <%# Grid for services cards %>
