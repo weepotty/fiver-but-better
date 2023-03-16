@@ -24,28 +24,31 @@ font-size: 2rem;
 
 .share-card ul li {
   list-style: none;
+  cursor: pointer;
+}
+
+.share-card ul li:hover {
+  filter: brightness(90%)
 }
 
 ul.social-mediums {
   padding-top: 15px;
+  gap: 4px;
 
 }
 #link-icon {
-  border: 2px solid lightgray;
-  padding: 12px;
+  // border: 2px solid lightgray;
+  padding: 8px;
   width: 60px;
   height: 60px;
 }
 
-.share-card path {
+#link-icon path {
   fill: #999999;
 }
 
 #link-icon:hover path{
   cursor:pointer;
-fill: gray;
-}
-#link-icon:hover {
-  border:2px solid gray;
-  cursor: pointer;
+  fill: gray;
+
 }
