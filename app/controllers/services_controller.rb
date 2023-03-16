@@ -2,9 +2,12 @@ class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    if params[:category].present?
+    if params[:category]
       @category = params[:category]
       @services = policy_scope(Service).where(category: @category)
+    elsif params[:query]
+      @query = params[:query]
+      @services = policy_scope(Service).search_by_title(@query)
     else
       @services = Service.all
       @services = policy_scope(Service)
