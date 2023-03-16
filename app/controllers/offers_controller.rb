@@ -2,6 +2,7 @@ class OffersController < ApplicationController
   def show
     @service = Service.find(params[:service_id])
     @offer = Offer.find(params[:id])
+    authorize @offer
   end
 
   def new
