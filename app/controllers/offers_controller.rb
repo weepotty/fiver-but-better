@@ -13,6 +13,7 @@ class OffersController < ApplicationController
     @offer.buyer = current_user
     @service = Service.find(params[:service_id])
     @offer.service = @service
+
     authorize @offer
     check_offer_validity(@offer, @service)
   end
@@ -26,6 +27,8 @@ class OffersController < ApplicationController
   def check_offer_validity(offer, service)
     if offer.save
       redirect_to service_path(service), notice: "Offer was successfully created"
+    elsif !@offer.valid?
+      redirect_to new_service_offer_path(service), alert: "You already have this package"
     else
       render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
     end
