@@ -11,7 +11,8 @@
             <p>Spread the word about this Gig on Fiver-But-Better</p>
             <ul class="social-mediums d-flex justify-content-center">
               <li>
-                <%= image_tag("whatsapp-logo.svg") %>
+                <%# whatsapp share probably only works on mobile %>
+                <a href="whatsapp://send?text=<%= request.original_url %>"><%= image_tag("whatsapp-logo.svg") %></a>
               </li>
               <li>
                 <%= image_tag("twitter-logo.svg") %>
