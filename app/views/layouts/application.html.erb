@@ -12,8 +12,8 @@
     <% unless action_name == "new" %>
       <%= render "shared/navbar" %>
     <% end %>
-    <%= render "shared/flashes" %>
-    <div class="flex-grow-1">
+    <div class="flex-grow-1 position-relative">
+      <%= render "shared/flashes" %>
       <%= yield %>
     </div>
     <% unless action_name == "new" %>
