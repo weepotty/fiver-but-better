@@ -1,20 +1,31 @@
 class ServicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
-    @services = Service.all
+    if params[:category].present?
+      @category = params[:category]
+      @services = policy_scope(Service).where(category: @category)
+    else
+      @services = Service.all
+      @services = policy_scope(Service)
+    end
   end
 
   def show
     @service = Service.find(params[:id])
+    authorize @service
   end
 
   def new
     @service = Service.new
+    authorize @service
   end
 
   def create
     @service = Service.new(service_params)
     @service[:price] = @service[:price].to_i * 100
     @service.seller = current_user
+    authorize @service
 
     if @service.save
       redirect_to service_path(@service), notice: "Service was successfully created"
