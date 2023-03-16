@@ -4,6 +4,8 @@
   <div class="container">
     <div class="row" id="row">
       <div class="col-3" id="col-3">
+
+      <%# User banner %>
         <%= render "user_match_card" %>
       </div>
       <div class="col-9">
@@ -11,17 +13,8 @@
       </div>
     </div>
 
-    <%# Grid for services cards %>
-      <div class="history">
-        <h2>Continue browsing <i class="fa-solid fa-arrow-right"></i></h2>
-        <div class="browse-history">
-          <% @services.each do |service| %>
-            <div class="mb-4" id="history-card">
-              <%= render 'users/service_card', service: service, user: service.seller %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+    <%# Browsing History scroll bar %>
+      <%= render "continue_browsing" %>
 
   </div>
 
