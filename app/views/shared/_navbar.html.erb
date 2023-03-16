@@ -36,11 +36,18 @@
       <% end %>
     </ul>
   </nav>
-  <div class="px-4 d-flex justify-content-between navbar navbar-expand-lg navbar-light">
+</div>
+
+<hr class="mt-0 mb-0">
+
+<div class="nav-wrapper px-0">
+  <div class="d-flex justify-content-evenly navbar navbar-expand-lg navbar-light">
     <ul class="navbar-nav d-flex">
       <% Service::CATEGORIES.first(8).each do |category| %>
-        <li><%= category %></li>
+        <li class="mx-3" style="color: gray;"><%= category %></li>
       <% end %>
     </ul>
   </div>
 </div>
+
+<hr class="mt-0 mb-0">
