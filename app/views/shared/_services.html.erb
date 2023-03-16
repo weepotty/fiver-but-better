@@ -1,10 +1,9 @@
 <div class="services-list">
-  <h1 class="fw-bold"><%= @category.nil? ? "All Categories" : @category  %></h1>
-  <p class="fs-5">This page currently shows all services available for <%= @category.nil? ? "All Categories" : @category  %></p>
+  <%= render 'shared/services_header' %>
 
   <%# Header for the services %>
   <div class="services-header">
-    <p class="fs-6"><%= services.count %> services available</p>
+    <p class="fs-6"><%= "#{services.count} #{'service'.pluralize(services.count)}" %> available</p>
   </div>
 
   <%# Grid for services cards %>
