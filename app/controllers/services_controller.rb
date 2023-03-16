@@ -1,7 +1,8 @@
 class ServicesController < ApplicationController
   def index
     if params[:category].present?
-      @services = Service.where(category: params[:category])
+      @category = params[:category]
+      @services = Service.where(category: @category)
     else
       @services = Service.all
     end
