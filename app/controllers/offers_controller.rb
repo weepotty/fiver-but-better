@@ -15,6 +15,9 @@ class OffersController < ApplicationController
 
     if @offer.save
       redirect_to service_path(@service), notice: "Offer was successfully created"
+    elsif @offer.valid? == false
+      # raise
+      redirect_to new_service_offer_path(@service), alert: "You already have this package"
     else
       render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
     end
