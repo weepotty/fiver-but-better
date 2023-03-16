@@ -1,6 +1,7 @@
-<div class="nav-wrapper">
-  <nav class="px-4 d-flex justify-content-between navbar navbar-expand-lg navbar-light">
+<div class="nav-wrapper bg-white">
+  <nav class="px-4 d-flex justify-content-between navbar navbar-expand-lg bg-white">
     <a class="navbar-brand logo" href=<%= user_signed_in? ? services_path : root_path %>><%= image_tag("FBB-logo.svg") %></a>
+    <%= render 'shared/search_form' %>
     <ul class="navbar-nav d-flex">
       <li class="nav-item">
         <a class="nav-link text-navy" href="#">Fiverr Business</a>
