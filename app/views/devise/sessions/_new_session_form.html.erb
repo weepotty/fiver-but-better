@@ -5,8 +5,13 @@
         <div class="mt-4">
           <h2 class="text-center fw-bold fs-3 mb-4">Sign In to Fiverr</h2>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="oauth-signin">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" height="20px" width="20px" class="oauth-signin-image">
+              <p class="oauth-signin-text">Continue with Google</p>
+              <%= link_to "", user_google_oauth2_omniauth_authorize_path, method: :post, class: "oauth-signin-link" %>
+            </div>
+            <div class="w-100 border border-bottom border-muted position-relative my-4"><span class="position-absolute bg-white p-2" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1rem;">OR</span></div>
             <div class="form-inputs">
-              <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
               <%= f.input :email,
                           required: false,
                           autofocus: true,

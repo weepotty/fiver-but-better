@@ -1,3 +1,42 @@
 #new_user {
   padding: 0 2rem;
 }
+
+.oauth-signin {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.oauth-signin-image {
+  display: block;
+}
+
+.oauth-signin-text {
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.oauth-signin-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.oauth-signin-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
