@@ -1,3 +1,42 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="user-match-card p-3">
+        <div>
+          <p><strong>Hi <%= current_user.username %>,</strong></p>
+          <p>Get matched with sellers for your project.</p>
+        </div>
+        <button class="post-request btn btn-success border-0">Post a request</button>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="user-suggestion-card">
+        <div class="suggestion-text">
+          <h2><%= current_user.username %>,</h2>
+          <h2>Here's what <i>you</i> need for your</h2>
+          <h2>WordPress website</h2>
+        </div>
+        <div class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="" alt="" class="d-block w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dsx50recn/image/upload/v1678800695/Fiverr-Home/carousel-1_ryn9rb.webp);">
   <div class="banner-container">
     <h1>Find the perfect <em>freelance</em> services for your business</h1>
