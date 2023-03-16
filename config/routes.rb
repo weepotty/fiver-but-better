@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :services, only: %i[index show new create] do
-    resources :offers, only: %i[new create]
+    resources :offers, only: %i[show new create]
   end
 end
