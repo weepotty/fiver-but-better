@@ -14,8 +14,7 @@ class OffersController < ApplicationController
     @service = Service.find(params[:service_id])
     @offer.service = @service
     authorize @offer
-
-    check_offer_validity
+    check_offer_validity(@offer, @service)
   end
 
   private
@@ -24,9 +23,9 @@ class OffersController < ApplicationController
     params.require(:offer).permit(:final_price, :final_delivery_time, :description, :buyer_id, :service_id)
   end
 
-  def check_offer_validity
-    if @offer.save
-      redirect_to service_path(@service), notice: "Offer was successfully created"
+  def check_offer_validity(offer, service)
+    if offer.save
+      redirect_to service_path(service), notice: "Offer was successfully created"
     else
       render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
     end
