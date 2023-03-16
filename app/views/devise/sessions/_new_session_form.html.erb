@@ -4,6 +4,7 @@
       <div class="modal-body p-0">
         <div class="mt-4">
           <h2 class="text-center fw-bold fs-3 mb-4">Sign In to Fiverr</h2>
+          <%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs">
               <%= f.input :email,
