@@ -1,6 +1,6 @@
 class Service < ApplicationRecord
   include PgSearch::Model
-  
+
   CATEGORIES = ["Graphic & Design", "Digital Marketing", "Writing & Translation", "Video Animation",
                 "Music Audio", "Programming & Tech", "Business", "Style", "Data", "Photography"]
 
@@ -18,5 +18,4 @@ class Service < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-  # enum :category, %i[graphicdesign digitalmarketing writingtranslation videoanimation musicudio programmingtech business style data photography]
 end

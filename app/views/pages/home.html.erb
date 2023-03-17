@@ -1,148 +1,182 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dsx50recn/image/upload/v1678800695/Fiverr-Home/carousel-1_ryn9rb.webp);">
-  <div class="banner-container">
-    <h1>Find the perfect <em>freelance</em> services for your business</h1>
+
+<% if current_user.present? %>
+
+  <div class="container">
+    <div class="row" id="row">
+      <div class="col-3" id="col-3">
+
+      <%# User banner %>
+        <%= render "user_match_card" %>
+      </div>
+      <div class="col-9">
+        <%= render "user_suggestion_card" %>
+      </div>
+    </div>
+
+    <%# Browsing History scroll bar %>
+      <%= render "continue_browsing" %>
+
   </div>
-</div>
-<div class="trusted-by-wrapper">
-  <div class="trusted-by">
-    <span>Trusted by:</span>
-    <ul>
-      <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-1_b5pggl.png"></li>
-      <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-2_p79mv2.png"></li>
-      <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-3_rlbgx2.png"></li>
-      <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-4_k19ooh.png"></li>
-      <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-5_cgqq1z.png"></li>
+
+
+<% else %>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dsx50recn/image/upload/v1678800695/Fiverr-Home/carousel-1_ryn9rb.webp);">
+    <div class="banner-container">
+      <h1>Find the perfect <em>freelance</em> services for your business</h1>
+      <button type="button" class="btn btn-green fw-bold px-3 py-2 fs-6" data-bs-toggle="modal" data-bs-target="#signupModal">Join now</button>
+  </div>
+  </div>
+  <div class="trusted-by-wrapper">
+    <div class="trusted-by">
+      <span>Trusted by:</span>
+      <ul>
+        <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-1_b5pggl.png"></li>
+        <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-2_p79mv2.png"></li>
+        <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-3_rlbgx2.png"></li>
+        <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-4_k19ooh.png"></li>
+        <li><img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678801094/Fiverr-Home/trusted-5_cgqq1z.png"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="home-container white-container">
+    <h2>Popular professional services</h2>
+    <div class="category-cards">
+      <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-1_sgf3an.webp'); background-size: cover;">
+        <a href="services"></a>
+        <h3>
+          <small>Customize your site</small>
+          WordPress
+        </h3>
+      </div>
+      <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-2_eolvlq.webp'); background-size: cover;">
+        <a href="services"></a>
+        <h3>
+          <small>Reach out more customers</small>
+          Social Media
+        </h3>
+      </div>
+      <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-3_egb5sj.webp'); background-size: cover;">
+        <a href="services"></a>
+        <h3>
+          <small>Build your brand</small>
+          Logo Design
+        </h3>
+      </div>
+      <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-4_mvpcut.webp'); background-size: cover;">
+        <a href="services"></a>
+        <h3>
+          <small>Add talent to AI</small>
+          AI Artists
+        </h3>
+      </div>
+      <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800749/Fiverr-Home/services-5_p68gnw.webp'); background-size: cover;">
+        <a href="services"></a>
+        <h3>
+          <small>Share your message</small>
+          Voice Over
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="home-container green-container proposition-section">
+    <div class="proposition-card">
+      <h2>A whole world of freelance talent at your fingertips</h2>
+      <h3><span><i class="fa-regular fa-circle-check"></i></span> The best for every budget</h3>
+      <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+      <h3><span><i class="fa-regular fa-circle-check"></i></span> Quality work done quickly</h3>
+      <p>Find the right freelancer to begin working on your project within minutes.</p>
+      <h3><span><i class="fa-regular fa-circle-check"></i></span> Protected payments, every time</h3>
+      <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
+      <h3><span><i class="fa-regular fa-circle-check"></i></span> 24/7 support</h3>
+      <p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
+    </div>
+    <div class="proposition-video" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678808296/Fiverr-Home/proposition-1_y1d71q.webp'); background-size: cover;">
+      <a href="#" class="video-btn"><i class="fa-solid fa-play"></i></a>
+    </div>
+  </div>
+  <div class="home-container white-container">
+    <h2>Explore the marketplace</h2>
+    <ul class="category-list">
+      <li class="category-list-item">
+        <%= link_to services_path(category: "Graphic & Design") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-1_winffz.svg">
+          <div> </div>
+          Graphics & Design
+        <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Digital Marketing") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-2_prigee.svg">
+          <div> </div>
+          Digital Marketing
+        <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Writing & Translation") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-3_mvjei7.svg">
+          <div> </div>
+          Writing & Translation
+        <% end %>
+        </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Video Animation") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-4_njjs1n.svg">
+          <div> </div>
+          Video & Animation
+        <% end %>
+       </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Music Audio") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-5_qjsrq9.svg">
+          <div> </div>
+          Music & Audio
+        <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Programming & Tech") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-6_npvlmw.svg">
+          <div> </div>
+          Programming & Tech
+          <% end %>
+         </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Business") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-7_o1bmo3.svg">
+          <div> </div>
+          Business
+          <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Style") do %>
+          <img src= "https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-8_kg0ned.svg">
+          <div> </div>
+          Style
+          <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Data") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-9_nc3los.svg">
+          <div> </div>
+          Data
+          <% end %>
+      </li>
+
+    <li class="category-list-item">
+        <%= link_to services_path(category: "Photography") do %>
+          <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-10_t5yy60.svg">
+          <div> </div>
+          Photography
+          <% end %>
+      </li>
     </ul>
   </div>
-</div>
-<div class="home-container white-container">
-  <h2>Popular professional services</h2>
-  <div class="category-cards">
-    <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-1_sgf3an.webp'); background-size: cover;">
-      <a href="services"></a>
-      <h3>
-        <small>Customize your site</small>
-        WordPress
-      </h3>
-    </div>
-    <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-2_eolvlq.webp'); background-size: cover;">
-      <a href="services"></a>
-      <h3>
-        <small>Reach out more customers</small>
-        Social Media
-      </h3>
-    </div>
-    <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-3_egb5sj.webp'); background-size: cover;">
-      <a href="services"></a>
-      <h3>
-        <small>Build your brand</small>
-        Logo Design
-      </h3>
-    </div>
-    <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800750/Fiverr-Home/services-4_mvpcut.webp'); background-size: cover;">
-      <a href="services"></a>
-      <h3>
-        <small>Add talent to AI</small>
-        AI Artists
-      </h3>
-    </div>
-    <div class="category-card" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678800749/Fiverr-Home/services-5_p68gnw.webp'); background-size: cover;">
-      <a href="services"></a>
-      <h3>
-        <small>Share your message</small>
-        Voice Over
-      </h3>
-    </div>
-  </div>
-</div>
-<div class="home-container green-container proposition-section">
-  <div class="proposition-card">
-    <h2>A whole world of freelance talent at your fingertips</h2>
-    <h3><span><i class="fa-regular fa-circle-check"></i></span> The best for every budget</h3>
-    <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
-    <h3><span><i class="fa-regular fa-circle-check"></i></span> Quality work done quickly</h3>
-    <p>Find the right freelancer to begin working on your project within minutes.</p>
-    <h3><span><i class="fa-regular fa-circle-check"></i></span> Protected payments, every time</h3>
-    <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
-    <h3><span><i class="fa-regular fa-circle-check"></i></span> 24/7 support</h3>
-    <p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
-  </div>
-  <div class="proposition-video" style="background-image: url('https://res.cloudinary.com/dsx50recn/image/upload/v1678808296/Fiverr-Home/proposition-1_y1d71q.webp'); background-size: cover;">
-    <a href="#" class="video-btn"><i class="fa-solid fa-play"></i></a>
-  </div>
-</div>
-<div class="home-container white-container">
-  <h2>Explore the marketplace</h2>
-  <ul class="category-list">
-    <li class="category-list-item">
-      <a href="services?category=Graphic+%26+Design">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-1_winffz.svg">
-        <div> </div>
-        Graphics & Design
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Digital+Marketing">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-2_prigee.svg">
-        <div> </div>
-        Digital Marketing
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Writing+%26+Translation">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-3_mvjei7.svg">
-        <div> </div>
-        Writing & Translation
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Video+Animation">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-4_njjs1n.svg">
-        <div> </div>
-        Video & Animation
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Music+Audio">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-5_qjsrq9.svg">
-        <div> </div>
-        Music & Audio
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Programming+%26+Tech">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-6_npvlmw.svg">
-        <div> </div>
-        Programming & Tech
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Business">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-7_o1bmo3.svg">
-        <div> </div>
-        Business
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Style">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-8_kg0ned.svg">
-        <div> </div>
-        Style
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Data">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-9_nc3los.svg">
-        <div> </div>
-        Data
-      </a>
-    </li>
-    <li class="category-list-item">
-      <a href="services?category=Photography">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-10_t5yy60.svg">
-        <div> </div>
-        Photography
-      </a>
-    </li>
-  </ul>
-</div>
+<% end %>
