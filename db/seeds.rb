@@ -91,5 +91,9 @@ Offer.create(description: 'I want to create a business website', status: 'Reject
 Offer.create(description: 'Let us talk about the design', status: 'Pending', final_price: 643_12, final_delivery_time: 3, buyer: buyer4, service: service1)
 Offer.create(description: 'Please help me with my Shopify site', status: 'Accepted', final_price: 1_200_00, final_delivery_time: 7, buyer: buyer1, service: service2)
 Offer.create(description: 'I want a shopify store', status: 'Rejected', final_price: 1_200_00, final_delivery_time: 7, buyer: buyer2, service: service2)
+Offer.create(description: 'I need a nice wordpress website', status: 'Pending', final_price: 345_00, final_delivery_time: 14, buyer: buyer1, service: service3)
+Offer.create(description: 'Help me with my wordpress portfolio page', status: 'Accepted', final_price: 234_43, final_delivery_time: 7, buyer: buyer1, service: service4)
+Offer.create(description: 'How to get a nice wix website', status: 'Pending', final_price: 123_00, final_delivery_time: 45, buyer: buyer1, service: service5)
+Offer.create(description: 'My portfolio page needs help!', status: 'Accepted', final_price: 489_65, final_delivery_time: 14, buyer: buyer1, service: service6)
 
 puts "Finished!"
