@@ -1,0 +1,5 @@
+<%= simple_form_for([service, review]) do |f| %>
+  <%= f.input :comment, placeholder: 'I really enjoyed...' %>
+  <%= f.input :rating %>
+  <%= f.submit 'Submit Review', class: 'btn btn-green' %>
+<% end %>
