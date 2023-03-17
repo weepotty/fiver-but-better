@@ -1,11 +1,21 @@
 <h1>Reviews</h1>
 
-<div class="container">
-  <div class="cards">
+<div>
+  <div class="review_cards">
     <% @reviews.each do |review| %>
-      <div class="card">
-      <%= review.comment %>
-      <%= review.rating %>
+      <div class="review_card">
+        <div class="d-flex gap-4">
+          <div>
+            <% review.rating.to_i.times do  %>
+              <i class="fa-sharp fa-solid fa-star" style="color: gold"></i>
+            <% end %>
+            <% (5 - review.rating.to_i).times do %>
+              <i class="fa-sharp fa-regular fa-star" style="color: gold"></i>
+            <% end %>
+          </div>
+          <div class="text-muted"><small><p><%= time_ago_in_words(review.created_at) %> ago</p></small></div>
+        </div>
+        <p><%= review.comment %></p>
       </div>
     <% end %>
   </div>
