@@ -16,7 +16,7 @@
           <% end %>
         <% end %>
       </div>
-      <% if @user == current_user %>
+      <% if policy(@user).edit? %>
         <%= link_to "Create Gig", new_service_path, class: "btn btn-green w-25" %>
       <% end %>
     </div>
