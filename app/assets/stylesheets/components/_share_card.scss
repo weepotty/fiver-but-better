@@ -22,22 +22,22 @@ font-size: 2rem;
   margin: 0;
 }
 
+.share-card ul {
+  padding-top: 15px;
+  gap: 4px;
+}
+
 .share-card ul li {
   list-style: none;
   cursor: pointer;
 }
 
 .share-card ul li:hover {
-  filter: brightness(90%)
+  filter: brightness(80%);
+  transition: ease-in-out 0.3s;
 }
 
-ul.social-mediums {
-  padding-top: 15px;
-  gap: 4px;
-
-}
 #link-icon {
-  // border: 2px solid lightgray;
   padding: 8px;
   width: 60px;
   height: 60px;
@@ -50,4 +50,17 @@ ul.social-mediums {
 #link-icon:hover path{
   cursor:pointer;
   fill: gray;
+  transition: ease-in-out 0.3s;
+}
+
+.share-card .confirmation-message {
+  color: #1EBE73
+}
+
+#shareModal .modal-content {
+  width: 800px;
+}
+
+#shareModal .modal-header {
+  border: none
 }
