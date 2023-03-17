@@ -8,6 +8,9 @@
       </div>
         <%= link_to "Back to Home", root_path, class: "home-button btn btn-success w-50 border-0" %>
     </div>
+    <div>
+      <%= render "shared/review_form", service: @service, review: @review %>
+    </div>
     <div class="col-3"></div>
   </div>
 </div>

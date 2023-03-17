@@ -8,6 +8,7 @@ class OffersController < ApplicationController
   def show
     @service = Service.find(params[:service_id])
     @offer = Offer.find(params[:id])
+    @review = Review.new
     authorize @offer
   end
 
