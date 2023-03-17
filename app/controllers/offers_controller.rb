@@ -1,4 +1,8 @@
 class OffersController < ApplicationController
+  def index
+    @offers = policy_scope(Offer).where(buyer_id: current_user)
+  end
+
   def show
     @service = Service.find(params[:service_id])
     @offer = Offer.find(params[:id])

@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
+  before_action :user_offers
 
   def home
     # logic from services#index
@@ -10,5 +11,11 @@ class PagesController < ApplicationController
       @services = Service.all
       @services = policy_scope(Service)
     end
+  end
+
+  private
+
+  def user_offers
+    @offers = policy_scope(Offer)
   end
 end
