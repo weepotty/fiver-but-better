@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :services, only: %i[index show new create] do
     resources :offers, only: %i[show new create]
-    resources :reviews, only: %i[index]
+    resources :reviews, only: %i[index new create]
   end
 end
