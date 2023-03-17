@@ -1,4 +1,6 @@
 class OffersController < ApplicationController
+  before_action :user_offers
+
   def index
     @offers = policy_scope(Offer).where(buyer_id: current_user)
   end
@@ -42,5 +44,9 @@ class OffersController < ApplicationController
     else
       render :new, status: :unprocessable_entity, alert: "Please fill in the required field"
     end
+  end
+
+  def user_offers
+    @offers = policy_scope(Offer)
   end
 end

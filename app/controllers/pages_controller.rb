@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   before_action :user_offers
 
   def home
+    raise
     # logic from services#index
     if params[:category].present?
       @category = params[:category]

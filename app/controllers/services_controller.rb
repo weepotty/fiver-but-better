@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :user_offers
 
   def index
     if params[:category]
@@ -41,5 +42,9 @@ class ServicesController < ApplicationController
 
   def service_params
     params.require(:service).permit(:title, :description, :category, :price, :delivery_time, :photo)
+  end
+
+  def user_offers
+    @offers = policy_scope(Offer)
   end
 end
