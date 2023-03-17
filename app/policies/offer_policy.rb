@@ -10,7 +10,11 @@ class OfferPolicy < ApplicationPolicy
     true
   end
 
-  def create?
+  def new?
     true
+  end
+
+  def create?
+    record.service.seller != user
   end
 end
