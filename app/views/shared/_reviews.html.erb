@@ -7,12 +7,13 @@
         <div class="d-flex gap-4">
           <div>
             <% review.rating.to_i.times do  %>
-              <i class="fa-sharp fa-solid fa-star" style="color: gold"></i>
+              <i class="fa-sharp fa-solid fa-star" style="color: #ffb33d;"></i>
             <% end %>
             <% (5 - review.rating.to_i).times do %>
-              <i class="fa-sharp fa-regular fa-star" style="color: gold"></i>
+              <i class="fa-sharp fa-regular fa-star" style="color: #ffb33d;"></i>
             <% end %>
           </div>
+          <div><p style="color: #ffb33d"><%= review.rating %> | </p></div>
           <div class="text-muted"><small><p><%= time_ago_in_words(review.created_at) %> ago</p></small></div>
         </div>
         <p><%= review.comment %></p>
