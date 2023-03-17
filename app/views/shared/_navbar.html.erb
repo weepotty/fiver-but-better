@@ -15,9 +15,33 @@
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fa-regular fa-heart"></i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Orders</a>
-      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Orders</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+              <% @offers.each do |offer| %>
+                <li>
+                  <div class="dropdown-item">
+                    <div class="offer-title">
+                      <a class="title text-decoration-none" href="#">
+                      <div class="d-flex gap-3 align-items-center">
+                        <%= cl_image_tag offer.service.photo.key, height: 80, width: 120, crop: :fill %>
+                        <%= test = offer.service.title.match(/(?<=I will ).*/).to_s.capitalize%>
+                      </div></a>
+                    </div>
+                    <div class="offer-details d-flex justify-content-between">
+                      <span>Delivery Time <strong><%= offer.service.delivery_time %></strong> Days</span>
+                      <span>Seller: <strong><%= offer.service.seller.username %></strong></span>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </li>
+      <% end %>
+
       <% if current_user %>
         <li class="nav-item">
           <a class="nav-link" href="/users/<%= current_user.id %>">

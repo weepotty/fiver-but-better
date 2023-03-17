@@ -13,4 +13,8 @@ class ServicePolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def edit?
+    record.seller == user
+  end
 end

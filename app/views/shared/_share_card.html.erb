@@ -11,8 +11,7 @@
             <p>Spread the word about this Gig on Fiver-But-Better</p>
             <ul class="social-mediums d-flex justify-content-center">
               <li>
-                <%# whatsapp share probably only works on mobile %>
-                <a href="whatsapp://send?text=<%= request.original_url %>"><%= image_tag("whatsapp-logo.svg") %></a>
+                <a href="https://api.whatsapp.com/send/?<%= "text=Check it out! %23FiverButBetter%3A #{@service.title} #{request.original_url}&type=custom_url&app_absent=0" %>" target="_blank"><%= image_tag("whatsapp-logo.svg") %></a>
               </li>
               <a class="twitter-share-button" href="https://twitter.com/intent/tweet?<%= "text=Check it out! %23FiverButBetter%3A #{@service.title}&url=#{request.original_url}" %>" target="_blank">
                 <%= image_tag("twitter-logo.svg") %>
