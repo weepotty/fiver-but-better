@@ -76,74 +76,83 @@
   <h2>Explore the marketplace</h2>
   <ul class="category-list">
     <li class="category-list-item">
-      <a href="services?category=Graphic+%26+Design">
+      <%= link_to services_path(category: "Graphic & Design") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-1_winffz.svg">
         <div> </div>
         Graphics & Design
-      </a>
+      <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Digital+Marketing">
+      <%= link_to services_path(category: "Digital Marketing") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-2_prigee.svg">
         <div> </div>
         Digital Marketing
-      </a>
+      <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Writing+%26+Translation">
+      <%= link_to services_path(category: "Writing & Translation") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-3_mvjei7.svg">
         <div> </div>
         Writing & Translation
-      </a>
-    </li>
+      <% end %>
+      </li>
+
     <li class="category-list-item">
-      <a href="services?category=Video+Animation">
+      <%= link_to services_path(category: "Video Animation") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-4_njjs1n.svg">
         <div> </div>
         Video & Animation
-      </a>
-    </li>
+      <% end %>
+     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Music+Audio">
+      <%= link_to services_path(category: "Music Audio") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836462/Fiverr-Home/Category%20List/svg-5_qjsrq9.svg">
         <div> </div>
         Music & Audio
-      </a>
+      <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Programming+%26+Tech">
+      <%= link_to services_path(category: "Programming & Tech") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-6_npvlmw.svg">
         <div> </div>
         Programming & Tech
-      </a>
-    </li>
+        <% end %>
+       </li>
+
     <li class="category-list-item">
-      <a href="services?category=Business">
+      <%= link_to services_path(category: "Business") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-7_o1bmo3.svg">
         <div> </div>
         Business
-      </a>
+        <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Style">
-        <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-8_kg0ned.svg">
+      <%= link_to services_path(category: "Style") do %>
+        <img src= "https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-8_kg0ned.svg">
         <div> </div>
         Style
-      </a>
+        <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Data">
+      <%= link_to services_path(category: "Data") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-9_nc3los.svg">
         <div> </div>
         Data
-      </a>
+        <% end %>
     </li>
+
     <li class="category-list-item">
-      <a href="services?category=Photography">
+      <%= link_to services_path(category: "Photography") do %>
         <img src="https://res.cloudinary.com/dsx50recn/image/upload/v1678836460/Fiverr-Home/Category%20List/svg-10_t5yy60.svg">
         <div> </div>
         Photography
-      </a>
+        <% end %>
     </li>
   </ul>
 </div>
