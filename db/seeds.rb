@@ -1,3 +1,6 @@
+puts "Destroying reviewss..."
+Review.destroy_all
+
 puts "Destroying offers..."
 Offer.destroy_all
 
