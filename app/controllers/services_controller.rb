@@ -17,6 +17,7 @@ class ServicesController < ApplicationController
   def show
     @service = Service.find(params[:id])
     authorize @service
+    @reviews = policy_scope(Review).where(service_id: @service)
   end
 
   def new
