@@ -1,0 +1,24 @@
+#history-card {
+  display: flex;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.browse-history {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+
+}
+
+.history {
+  border: 1px solid lightgray !important;
+  border-radius: 3px;
+  margin: 20px 10px;
+  margin-bottom: 50px;
+  padding: 30px 30px;
+}
+
+.history h2{
+  font-size: 1.2em;
+}

@@ -1,0 +1,21 @@
+.user-match-card {
+  width: 280px;
+  height: 250px;
+  background-color: #ffffff;
+  margin: 30px 10px;
+  padding: 10px 10px;
+  // border: 1px solid lightgrey;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-match-card p {
+  text-align: center;
+}
+
+.post-request {
+  margin: 0 auto;
+  color: white;
+}
