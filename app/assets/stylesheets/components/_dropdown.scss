@@ -1,0 +1,28 @@
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  width: 470px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-bottom: 1px solid lightgrey;
+}
+
+.offer-title .title {
+  width: 100%;
+  white-space: normal;
+  display: block;
+  color: rgb(39, 39, 39);
+  font-size: 1.2em;
+  overflow-wrap: break-word;
+}
+
+.offer-details span{
+  font-size: 0.9em;
+  color: grey;
+}

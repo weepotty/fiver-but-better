@@ -16,7 +16,28 @@
         <a class="nav-link" href="#"><i class="fa-regular fa-heart"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Orders</a>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Orders</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <% Offer.all.first(6).each do |offer| %>
+              <li>
+                <div class="dropdown-item">
+                  <div class="offer-title">
+                    <a class="title text-decoration-none" href="#">
+                    <div class="d-flex gap-3">
+                      <%= cl_image_tag offer.service.photo.key, height: 80, width: 120, crop: :fill %>
+                      <%= offer.service.title.match(/(?<=I will ).*/)%>
+                    </div></a>
+                  </div>
+                  <div class="offer-details d-flex justify-content-between">
+                    <span>Delivery Time <strong><%= offer.service.delivery_time %></strong> Days</span>
+                    <span>Seller: <strong><%= offer.service.seller.username %></strong></span>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </li>
       <% if current_user %>
         <li class="nav-item">
