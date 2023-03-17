@@ -10,5 +10,5 @@ application.register("clipboard", ClipboardController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import OrdersController from "./orders_controller"
-application.register("orders", OrdersController)
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)
