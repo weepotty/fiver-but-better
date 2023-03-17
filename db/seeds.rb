@@ -84,6 +84,36 @@ service9 = Service.new(title: 'I will be your social media manager and personal 
 service9.photo.attach(io: service9_pic, filename: "web-dev-3_vw4r1i.jpg", content_type: "image/jpg")
 service9.save
 
+service10_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034056/Fiverr-Home/digital-marketing-1_a0kcet.jpg")
+service10 = Service.new(title: 'I will setup, manage and optimize your amazon ppc campaign ads', description: "I will help you increase sales on Amazon,increase your sales by an average of 40 percent to bring your Amazon product to the ideal point.", price: 28_17, delivery_time: 1, category: 'Digital Marketing', seller: seller1)
+service10.photo.attach(io: service10_pic, filename: "digital-marketing-1_a0kcet.jpg", content_type: "image/jpg")
+service10.save
+
+service11_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034056/Fiverr-Home/digital-marketing-2_yopqsw.jpg")
+service11 = Service.new(title: 'I will set up facebook shop instagram shop with solving all the issues', description: "Instagram shop and the Facebook shop are very helpful to grow your business and sales. So, contact me right now to help you set up everything :)", price: 22_12, delivery_time: 2, category: 'Digital Marketing', seller: seller1)
+service11.photo.attach(io: service11_pic, filename: "digital-marketing-2_yopqsw.jpg", content_type: "image/jpg")
+service11.save
+
+service12_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034056/Fiverr-Home/digital-marketing-3_ew1tyh.jpg")
+service12 = Service.new(title: 'I will do ebay product listing SEO optimization html template design', description: "Do you need eBay products listing in your eBay store with SEO? I am here to list your all products on eBay. I am well experienced in eBay listing.", price: 7_04, delivery_time: 2, category: 'Digital Marketing', seller: seller1)
+service12.photo.attach(io: service12_pic, filename: "digital-marketing-3_ew1tyh.jpg", content_type: "image/jpg")
+service12.save
+
+service13_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034057/Fiverr-Home/digital-marketing-4_tnewcy.jpg")
+service13 = Service.new(title: 'I will create your amazon brand store or storefront design', description: "You can promote your brand on social media using the store custom URL (www.amazon.marketplace/your_brand) by having a professional and attractive storefront.", price: 104_83, delivery_time: 1, category: 'Digital Marketing', seller: seller1)
+service13.photo.attach(io: service13_pic, filename: "digital-marketing-4_tnewcy.jpg", content_type: "image/jpg")
+service13.save
+
+service14_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034056/Fiverr-Home/digital-marketing-5_yf0rsh.jpg")
+service14 = Service.new(title: 'I will do a conversion rate optimization cro review for your website', description: "I have over 6 years of experience with Shopify, e-commerce and conversion rate optimization (cro); I'm the founder & CEO of Fenitas, a brand that sells 100% natural food colouring.", price: 168_99, delivery_time: 7, category: 'Digital Marketing', seller: seller1)
+service14.photo.attach(io: service14_pic, filename: "digital-marketing-5_yf0rsh.jpg", content_type: "image/jpg")
+service14.save
+
+service15_pic = URI.open("https://res.cloudinary.com/dsx50recn/image/upload/v1679034056/Fiverr-Home/digital-marketing-6_so5cyn.jpg")
+service15 = Service.new(title: 'I will rewrite your etsy titles and tags for SEO', description: "With over 2400 sales in my shop, I have learned a LOT! I want to help you improve your Etsy shop by offering you constructive feedback. I believe in your business, and I want you to be confident in running your shop!", price: 21_12, delivery_time: 5, category: 'Digital Marketing', seller: seller1)
+service15.photo.attach(io: service15_pic, filename: "digital-marketing-6_so5cyn.jpg", content_type: "image/jpg")
+service15.save
+
 puts "Creating offers..."
 Offer.create(description: 'I need help with website design', status: 'Pending', final_price: 643_12, final_delivery_time: 3, buyer: buyer1, service: service1)
 Offer.create(description: 'Please help me with my landing page', status: 'Accepted', final_price: 643_12, final_delivery_time: 3, buyer: buyer2, service: service1)
