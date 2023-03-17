@@ -96,4 +96,10 @@ Offer.create(description: 'Help me with my wordpress portfolio page', status: 'A
 Offer.create(description: 'How to get a nice wix website', status: 'Pending', final_price: 123_00, final_delivery_time: 45, buyer: buyer1, service: service5)
 Offer.create(description: 'My portfolio page needs help!', status: 'Accepted', final_price: 489_65, final_delivery_time: 14, buyer: buyer1, service: service6)
 
+puts "Creating reviews..."
+Review.create(comment: 'Seller was very knowledgeable and professional. Very skilled and helped me create a terrific product. Greatly appreciate his effort and patience', rating: 5, service: service1)
+Review.create(comment: 'Outstanding and highly professional. I can strongly recommend this freelancer that delivered the work quickly and with a superior quality.', rating: 4, service: service1)
+Review.create(comment: 'Fantastic to work with! ', rating: 4, service: service2)
+Review.create(comment: 'Really awesome work!', rating: 5, service: service2)
+
 puts "Finished!"
