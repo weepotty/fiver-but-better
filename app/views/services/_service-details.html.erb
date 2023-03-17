@@ -26,7 +26,7 @@
       </div>
       <div class="seller-details">
         <%= link_to @service.seller.username, user_path(@service.seller) %>
-        <% unless current_user == @service.seller %>
+        <% unless policy(@service).edit? %>
           <a href="#" class="d-block btn btn-grey mt-3">Contact Me</a>
         <% end %>
       </div>

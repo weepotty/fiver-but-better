@@ -1,4 +1,4 @@
-class ServicePolicy < ApplicationPolicy
+class ReviewPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -12,9 +12,5 @@ class ServicePolicy < ApplicationPolicy
 
   def create?
     true
-  end
-
-  def edit?
-    record.seller == user
   end
 end
