@@ -27,7 +27,7 @@
                       <a class="title text-decoration-none" href="#">
                       <div class="d-flex gap-3 align-items-center">
                         <%= cl_image_tag offer.service.photo.key, height: 80, width: 120, crop: :fill %>
-                        <%= offer.service.title.match(/(?<=I will ).*/)%>
+                        <%= test = offer.service.title.match(/(?<=I will ).*/).to_s.capitalize%>
                       </div></a>
                     </div>
                     <div class="offer-details d-flex justify-content-between">
