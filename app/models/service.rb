@@ -6,6 +6,7 @@ class Service < ApplicationRecord
 
   belongs_to :seller, class_name: "User", foreign_key: :seller_id
   has_many :offers
+  has_many :reviews
   has_one_attached :photo
 
   validates :title, :description, :price, :delivery_time, :category, presence: true
