@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_16_095755) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_17_043140) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_095755) do
     t.index ["service_id"], name: "index_offers_on_service_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "comment"
+    t.integer "rating"
+    t.bigint "service_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_reviews_on_service_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
@@ -77,8 +86,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_095755) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -87,5 +94,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_095755) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "offers", "services"
   add_foreign_key "offers", "users", column: "buyer_id"
+  add_foreign_key "reviews", "services"
   add_foreign_key "services", "users", column: "seller_id"
 end
