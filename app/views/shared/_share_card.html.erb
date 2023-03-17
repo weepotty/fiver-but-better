@@ -6,7 +6,9 @@
       <%= image_tag("whatsapp-logo.svg") %>
     </li>
     <li>
-      <%= image_tag("twitter-logo.svg") %>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?<%= "text=Check it out! %23FiverButBetter%3A #{@service.title}&url=#{request.original_url}" %>" target="_blank">
+        <%= image_tag("twitter-logo.svg") %>
+      </a>
     </li>
     <li>
       <%= image_tag("facebook-logo.svg") %>
